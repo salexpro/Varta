@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Varta</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 logo">
+
+            </div>
+            <div class="col-md-8 bebasneue-reg">
+                <ul>
+                    <li>Правила и призы</li>
+                    <li>Регистрация</li>
+                    <li>Победители</li>
+                    <li>Обратная связь</li>
+                    <li data-toggle="modal" data-target="#notice">FAQ</li>
+                    <li data-toggle="modal" data-target="#login">Где купить</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container personal bebasneue-reg">
+    <div class="row">
+        <div class="col-md-12 text-center fixi-reg"><h4>личный кабинет</h4></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            Здравствуйте, Ольга Валерьевна
+        </div>
+        <div class="col-md-3 text-right"><a href="index.html">Выйти</a></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Личные данные:
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>Фамилия:</dt>
+                <dd>Семенова</dd>
+                <dt>Имя:</dt>
+                <dd>Ольга</dd>
+                <dt>Отчество:</dt>
+                <dd>Валерьевна</dd>
+                <dt>Email:</dt>
+                <dd>olga.s@gmail.com</dd>
+                <dt>Телефон:</dt>
+                <dd>+7 910 392 43 87</dd>
+            </dl>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12  text-left">
+                    Вам осталось зарегистрировать <span class="orange">2 кода</span> для участия в розыгрыше главного приза
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" placeholder="Введите код">
+                </div>
+                <div class="col-md-6">
+                    <button class="fixi-reg" type="button">зарегистрировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Мои коды:
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <dl class="dl-horizontal orange">
+                <dt>12.12.2017</dt>
+                <dd>1234567</dd>
+                <dt>12.12.2017</dt>
+                <dd>1234567</dd>
+                <dt>12.12.2017</dt>
+                <dd>1234567</dd>
+            </dl>
+        </div>
+        <div class="col-md-3">
+            <dl class="dl-horizontal orange">
+                <dt>12.12.2017</dt>
+                <dd>1234567</dd>
+                <dt>12.12.2017</dt>
+                <dd>1234567</dd>
+            </dl>
+        </div>
+    </div>
+
+
+
+    <div class="address">
+        <form action="">
+            <div class="row">
+                <div class="col-md-6">
+                    Добавление данных для получения приза:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="zip">Индекс:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="zip" type="text" name="zip" placeholder="123456">
+                </div>
+                <div class="col-md-2">
+                    <label for="region">Регион:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="region" type="text" name="region" placeholder="Московская область">
+                </div>
+                <div class="col-md-2">
+                    <label for="district">Район:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="district" type="text" name="district" placeholder="Воскресенский">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="city">Город:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="city" type="text" name="city" placeholder="Воскресенск">
+                </div>
+                <div class="col-md-2">
+                    <label for="street">Улица:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="street" type="text" name="street" placeholder="Поперечная">
+                </div>
+                <div class="col-md-2">
+                    <label for="house">Дом/Корпус:</label>
+                </div>
+                <div class="col-md-1">
+                    <input id="house" type="text" name="house" placeholder="125">
+                </div>
+                <div class="col-md-1">
+                    <input id="corpus" type="text" name="corpus" placeholder="55">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    Дополнение к адресу:
+                </div>
+                <div class="col-md-2">
+                    <label for="flat">Строение/Квартира:</label>
+                </div>
+                <div class="col-md-1">
+                    <input id="building" type="text" name="building" placeholder="80">
+                </div>
+                <div class="col-md-1">
+                    <input id="flat" type="text" name="flat" placeholder="117">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <textarea name="additional" id="additional" placeholder="Дополнение"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    Паспортные данные:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="number1">Серия:</label>
+                </div>
+                <div class="col-md-1">
+                    <input id="number1" type="text" name="number1" placeholder="5269">
+                </div>
+                <div class="col-md-1">
+                    <label for="number2">Номер:</label>
+                </div>
+                <div class="col-md-1">
+                    <input id="number2" type="text" name="number2" placeholder="325678">
+                </div>
+                <div class="col-md-2">
+                    <label for="issued_by">Кем выдан:</label>
+                </div>
+                <div class="col-md-5">
+                    <input id="issued_by" type="text" name="issued_by" placeholder="Воскресенским УВД Московской Области">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="issued_when">Дата выдачи:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="issued_when" type="text" name="issued_when" placeholder="12.05.2003">
+                </div>
+                <div class="col-md-2">
+                    <label for="code">Код подразделения:</label>
+                </div>
+                <div class="col-md-2">
+                    <input id="code" type="text" name="code" placeholder="105-523">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="adress">Адрес прописки:</label>
+                </div>
+                <div class="col-md-4">
+                    <textarea name="adress" id="adress" placeholder="Адрес прописки"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="scan">Скан паспорта:</label>
+                </div>
+                <div class="col-md-3">
+                    <input disabled id="scan" type="text" placeholder="">
+                </div>
+                <div class="col-md-2">
+                    <input name="file" type="file">
+                    <label class="text-center fixi-reg" for="file">Обзор</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button class="fixi-reg" type="button">добавить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="fixics">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="fixic" src="img/fixics.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 bebasneue-reg">
+                        Если у вас возникли какие-либо вопросы, <br>
+                        Вы можете написать нам на почту fixiki@varta-consumer.ru
+                    </div>
+                    <div class="col-md-12 logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="#"><img src="img/vk.png" alt=""></a>
+                <a href="#"><img src="img/fb.png" alt=""></a>
+                <a href="#"><img src="img/ok.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/skrollr/dist/skrollr.min.js"></script>
+<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+<script type="text/javascript">
+    var s = skrollr.init({
+        forceHeight: false,
+        constants: {
+            //fill the box for a "duration" of 150% of the viewport (pause for 150%)
+            //adjust for shorter/longer pause
+            box: '150p'
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    // Создает обработчик события window.onLoad
+    YMaps.jQuery(function () {
+        // Создает экземпляр карты и привязывает его к созданному контейнеру
+        var map = new YMaps.Map(YMaps.jQuery("#map")[0]);
+
+        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+        map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+    })
+</script>
+<div class="modal fade bs-example-modal-lg" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <form action="personal.html">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
+                    <h4 class="modal-title fixi-reg ">вход в личный кабинет</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row social">
+                        <div class="col-md-12 text-center bebasneue-reg">
+                            Зарегистрироваться через:
+                            <a href="#"><img src="img/vk_white.png" alt=""></a>
+                            <a href="#"><img src="img/fb_white.png" alt=""></a>
+                            <a href="#"><img src="img/ok_white.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <label for="auth_email" class="bebasneue-reg">Email:</label>
+                            <input class="bebasneue-reg" type="email" id="auth_email" placeholder="Укажите Email">
+                        </div>
+                        <div class="col-md-4 col-md-offset-4">
+                            <label for="auth_password" class="bebasneue-reg">Пароль:</label>
+                            <input class="bebasneue-reg" type="password" id="auth_password" placeholder="******">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-4 text-left forgot">
+                            <a class="bebasneue-reg" data-dismiss="modal" data-toggle="modal" data-target="#forgot" href="#">забыли пароль?</a>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="white" type="checkbox" id="remember_me">
+                            <label class="bebasneue-reg" for="remember_me">запомнить</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="fixi-reg">
+                                <button type="submit" class="fixi-button white">войти</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </form>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
+                <h4 class="modal-title fixi-reg ">восстановление пароля</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <label for="auth_email" class="bebasneue-reg">Email:</label>
+                        <input class="bebasneue-reg" type="email" id="auth_email" placeholder="Укажите Email">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row text-center">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="fixi-reg">
+                            <button class="fixi-button white">отправить пароль</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="notice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
+                <h4 class="modal-title fixi-reg ">ураа!</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row">
+                    <div class="col-md-12 text-center bebasneue-reg">
+                        Поздравляем! <br>
+                        Вы выиграли гироскутер.
+                        Для получения приза необходимо дозаполнить данные в личном кабинете.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row text-center">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="fixi-reg">
+                            <button type="submit" class="fixi-button white">дрыц-тыц!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
