@@ -237,6 +237,7 @@ body {
 .welcome
 {
     position: relative;
+    padding-bottom: 55px;
 }
 
 .welcome a
@@ -248,6 +249,17 @@ body {
 .welcome img
 {
     width: 100%;
+}
+
+.welcome .center-text
+{
+    color: #eebd1c;
+    position: absolute;
+    z-index: 100;
+    top: 345px;
+    line-height: 60px;
+    left: -75px;
+    transform: rotate(-8deg);
 }
 
 .welcome .akrobat-reg
@@ -302,6 +314,11 @@ button.fixi-button
     font-size: 20px;
 }
 
+.mechanics .hurryup
+{
+    font-size: 26px;
+}
+
 .mechanics h4
 {
     font-size: 42px;
@@ -331,6 +348,8 @@ button.fixi-button
 {
     height: 100px;
     float:left;
+    display: inline-block !important;
+    width: auto !important;
 }
 
 .mechanics .caption
@@ -707,7 +726,6 @@ span.prize
 
 .post-parallax.orange
 {
-    position:fixed;
     z-index: 60;
 }
 

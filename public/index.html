@@ -8,6 +8,7 @@
     <title>Varta</title>
     <link href="css/main.css" rel="stylesheet">
     <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="header">
@@ -29,7 +30,7 @@
         </div>
     </div>
 </div>
-<img data-top="top:20%" data-bottom="top:40%" data-1000="top:50%" data-3000="top:50%"  data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" id="scroll" src="img/scroll.png" alt="">
+<img data-top="top:20%" data-bottom="top:40%"  data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" id="scroll" src="img/scroll.png" alt="">
 <div class="pre-parallax pink">
     <div class="container welcome">
         <div id="dates" class="bebasneue-reg">04.09.2017 - 31.12.2017</div>
@@ -38,8 +39,15 @@
                 <img src="img/batteries.png" alt="">
                 <a class="bebasneue-reg" href="#">Подробнее узнать о наших продуктах</a>
             </div>
-            <div style="position:relative;" class="col-md-5">
+            <div style="position:relative; height: 800px;" class="col-md-5">
+                <div class="fixi-reg center-text">
+                    <div style="margin-left: 130px;font-size: 37pt;">собЕри всех</div>
+                    <div style="margin-left: 170px;font-size: 55pt;">фикСиков</div>
+                    <div style="margin-left: 100px;font-size: 42pt;">и выиграй</div>
+                    <div style="margin-left: 25px;font-size: 65pt;">гироскутер!</div>
+                </div>
                 <img style="position: absolute;left: -115px;top:-130px;width: 650px;" src="img/fixiki_center_2.png" alt="">
+                <img style="position: absolute;top:610px;width: 400px;" src="img/scooter_center.png" alt="">
             </div>
             <div class="col-md-3">
                 <img src="img/mechanics.png" alt="">
@@ -53,8 +61,8 @@
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-md-6 col-md-offset-3 akrobat-reg">
-                Стимулирующее мероприятие действует на территории РФ. Не является лотереей. Подробные правила проведения, информация об организаторе, количестве призов, сроках, месте и порядке их получения размещены на сайте www.varta-consumer.ru.
+            <div class="col-md-12 akrobat-reg">
+                Организатор акции — ООО «СОВА». Стимулирующее мероприятие в виде рекламной акции «Собери всех Фиксиков и получи гироскутер в подарок» действует на территории РФ. Не является лотереей. Общий период проведения стимулирующего мероприятия: с 04.09.2017 по 31.12.2017, включая период выдачи призов победителям. Регистрация промо-кодов осуществляется в период с 00 часов 00 минут 01 секунд 4 сентября 2017 года по 23 часа 59 минут 59 секунд 14 декабря 2017 года по московскому времени на сайте http://www.varta-consumer.ru. Обязательным условием участия в розыгрыше и получения главного приза (гироскутер) является вступление в сообщество Varta Consumer Russia в одной из 3-х социальных сетей и предъявление чека после розыгрыша. Подробные правила проведения, информация об организаторе, количестве призов, сроках, месте и порядке их вручения размещены на сайте: http://www.varta-consumer.ru. Количество призов ограничено. Призы могут отличаться от изображенных.
             </div>
         </div>
     </div>
@@ -64,8 +72,7 @@
 
 </div>
 
-<div style="width: 100%; height: 2400px; color:#fff"></div>
-<div data-0="display:none" data-400="display:block; top:110%;" data-1000="top:8%;" data-3000="top:8%;" data-3750="top:-110%;"  data-3850="top:-150%;" class="post-parallax cyan pre-parallax orange">
+<div class="post-parallax cyan pre-parallax orange">
     <div class="container mechanics">
         <div class="row">
             <div class="col-md-4 yellow bebasneue-reg">
@@ -82,8 +89,8 @@
             </div>
         </div>
 
-        <div class="row prizes">
-            <div data-0="display:block" data-1000="display:block;" data-1500="display:none" class="item">
+        <div class="row prizes owl-carousel">
+            <div class="item">
                 <div class="col-md-5 text-center">
                     <div class="title code fixi-reg">1 код</div>
                     <img class="code" src="img/1code.png" alt="">
@@ -95,7 +102,7 @@
                     <img class="prize" src="img/1prize.png" alt="">
                 </div>
             </div>
-            <div data-0="display:none" data-1500="display:block;" data-2000="display:none" class="item">
+            <div class="item">
                 <div class="col-md-5 text-center">
                     <div class="title code fixi-reg">2 кода</div>
                     <img class="code" src="img/2code.png" alt="">
@@ -107,7 +114,7 @@
                     <img class="prize" src="img/2prize.png" alt="">
                 </div>
             </div>
-            <div data-0="display:none" data-2000="display:block;" data-2500="display:none" class="item">
+            <div class="item">
                 <div class="col-md-5 text-center">
                     <div class="title code fixi-reg">3 кода</div>
                     <img class="code" src="img/3codes.png" alt="">
@@ -119,7 +126,7 @@
                     <img class="prize" src="img/3prize.png" alt="">
                 </div>
             </div>
-            <div data-0="display:none" data-2500="display:block;" class="item">
+            <div class="item">
                 <div class="col-md-5 text-center">
                     <div class="title code fixi-reg">4 кода</div>
                     <img class="code" src="img/4codes.png" alt="">
@@ -134,8 +141,9 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg">
-                С 4 сентября 2017 года по 25 декабря 2017 года при покупке от 1 упаковки стикерованного продукта покупатель получает возможность стать обладателем призов и выиграть главный приз <span class="prize">— гироскутер.</span> Розыгрыш проходит еженедельно. Спешите принять участие!
+            <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg hurryup">
+                С 4 сентября 2017 года по 25 декабря 2017 года при покупке от 1 упаковки стикерованного продукта покупатель получает возможность стать обладателем призов и выиграть главный приз <span class="prize">— гироскутер.</span> Розыгрыш проходит еженедельно.
+                <br> Спешите принять участие!
             </div>
         </div>
         <div class="row bebasneue-reg text-center">
@@ -430,7 +438,7 @@
                 <div class="row">
                     <div class="col-md-12 bebasneue-reg">
                         Если у вас возникли какие-либо вопросы, <br>
-                        Вы можете написать нам на почту fixiki@varta-consumer.ru
+                        Вы можете написать нам на почту promorus@eu.spectrumbrands.com
                     </div>
                     <div class="col-md-12 logo">
                     </div>
@@ -450,6 +458,7 @@
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendor/skrollr/dist/skrollr.min.js"></script>
+<script src="vendor/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 <script type="text/javascript">
     var s = skrollr.init({
@@ -459,6 +468,19 @@
             //adjust for shorter/longer pause
             box: '150p'
         }
+    });
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel(
+            {
+                nav:false,
+                loop: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout:2500,
+                autoplayHoverPause:false
+            }
+        )
     });
 
 </script>
