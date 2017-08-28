@@ -667,7 +667,7 @@ span.prize
     z-index: -1;
     bottom: 0;
     transform-origin: right bottom;
-    transform: skewY(-3deg);
+    transform: skewY(3deg);
 }
 
 .pre-parallax.pink::after

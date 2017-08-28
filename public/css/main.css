@@ -139,7 +139,7 @@ body {
 {
     position: fixed;
     z-index: 100;
-    right:200px;
+    right:25px;
     top:20%;
 }
 
@@ -667,7 +667,7 @@ span.prize
     z-index: -1;
     bottom: 0;
     transform-origin: right bottom;
-    transform: skewY(-3deg);
+    transform: skewY(-1deg);
 }
 
 .pre-parallax.pink::after
@@ -699,9 +699,9 @@ span.prize
     position: absolute;
     background: inherit;
     z-index: -1;
-    top: 0;
+    top: -100px;
     transform-origin: right top;
-    transform: skewY(3deg);
+    transform: skewY(-1deg);
 }
 
 

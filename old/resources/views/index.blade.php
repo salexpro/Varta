@@ -10,7 +10,7 @@
                     <a class="bebasneue-reg" href="#">Подробнее узнать о наших продуктах</a>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ asset('img/fixiki_center.png') }}" alt="">
+                    <img src="{{ asset('img/fixiki_center_2.png') }}" alt="">
                 </div>
                 <div class="col-md-3">
                     <img src="{{ asset('img/mechanics.png') }}" alt="">
@@ -55,49 +55,49 @@
 
             <div class="row prizes">
                 <div data-0="display:block" data-1000="display:block;" data-1500="display:none" class="item">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title code fixi-reg">1 код</div>
                         <img class="code" src="{{ asset('img/1code.png') }}" alt="">
                     </div>
-                    <div class="col-md-4 arrow">
+                    <div class="col-md-2 arrow">
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title fixi-reg">3d раскраска</div>
                         <img class="prize" src="{{ asset('img/1prize.png') }}" alt="">
                     </div>
                 </div>
                 <div data-0="display:none" data-1500="display:block;" data-2000="display:none" class="item">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title code fixi-reg">2 кода</div>
                         <img class="code" src="{{ asset('img/2code.png') }}" alt="">
                     </div>
-                    <div class="col-md-4 arrow">
+                    <div class="col-md-2 arrow">
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title fixi-reg">игра</div>
                         <img class="prize" src="{{ asset('img/2prize.png') }}" alt="">
                     </div>
                 </div>
                 <div data-0="display:none" data-2000="display:block;" data-2500="display:none" class="item">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title code fixi-reg">3 кода</div>
                         <img class="code" src="{{ asset('img/3codes.png') }}" alt="">
                     </div>
-                    <div class="col-md-4 arrow">
+                    <div class="col-md-2 arrow">
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title fixi-reg">фонарик</div>
                         <img class="prize" src="{{ asset('img/3prize.png') }}" alt="">
                     </div>
                 </div>
                 <div data-0="display:none" data-2500="display:block;" class="item">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title code fixi-reg">4 кода</div>
                         <img class="code" src="{{ asset('img/4codes.png') }}" alt="">
                     </div>
-                    <div class="col-md-4 arrow">
+                    <div class="col-md-2 arrow">
                     </div>
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-5 text-center">
                         <div class="title fixi-reg">гироскутер</div>
                         <img class="prize" src="{{ asset('img/4prize.png') }}" alt="">
                     </div>
