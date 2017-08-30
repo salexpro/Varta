@@ -1,607 +1,450 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Varta</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="vendor/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div class="header">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Varta</title>
+  <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="vendor/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <div class="header">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 logo">
-
-            </div>
-            <div class="col-md-8 bebasneue-reg">
-                <ul>
-                    <li>Правила и призы</li>
-                    <li>Регистрация</li>
-                    <li>Победители</li>
-                    <li>Обратная связь</li>
-                    <li data-toggle="modal" data-target="#notice">FAQ</li>
-                    <li data-toggle="modal" data-target="#login">Где купить</li>
-                </ul>
-            </div>
-        </div>
+      <div class="logo"></div>
+      <div class="bebasneue-reg">
+        <ul>
+          <li><a href="#prizes">Правила и призы</a></li>
+          <li><a href="#register">Регистрация</a></li>
+          <li><a href="#winners">Победители</a></li>
+          <li><a href="#feedback">Обратная связь</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#login">Где купить</a></li>
+        </ul>
+      </div>
     </div>
-</div>
-<img data-top="top:20%" data-bottom="top:40%"  data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" id="scroll" src="img/scroll.png" alt="">
-<div class="pre-parallax pink">
+  </div>
+  <div class="pre-parallax pink">
     <div class="container welcome">
-        <div id="dates" class="bebasneue-reg">04.09.2017 - 31.12.2017</div>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="img/batteries.png" alt="">
-                <a class="bebasneue-reg" href="#">Подробнее узнать о наших продуктах</a>
-            </div>
-            <div style="position:relative; height: 800px;" class="col-md-5">
-                <div class="fixi-reg center-text">
-                    <div style="margin-left: 130px;font-size: 37pt;">собЕри всех</div>
-                    <div style="margin-left: 170px;font-size: 55pt;">фикСиков</div>
-                    <div style="margin-left: 100px;font-size: 42pt;">и выиграй</div>
-                    <div style="margin-left: 25px;font-size: 65pt;">гироскутер!</div>
-                </div>
-                <img style="position: absolute;left: -115px;top:-130px;width: 650px;" src="img/fixiki_center_2.png" alt="">
-                <img style="position: absolute;top:610px;width: 400px;" src="img/scooter_center.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="img/mechanics.png" alt="">
-            </div>
+      <div class="bebasneue-reg" id="dates">04.09.2017 - 31.12.2017</div>
+      <div class="welcome_inner">
+        <div class="welcome_batteries"><img src="img/batteries.png" alt=""><a class="bebasneue-reg" href="#">Подробнее узнать о наших продуктах</a></div>
+        <div class="welcome_fixi"><img src="img/fixiki_center_2.png" alt="">
+          <div class="fixi-reg center-text">
+            <div style="margin-left: 67px;font-size: 37px;">собЕри всех</div>
+            <div style="margin-left: 97px;font-size: 55px;">фикСиков</div>
+            <div style="margin-left: 32px;font-size: 42px;">и выиграй</div>
+            <div style="font-size: 65px;">гироскутер!</div>
+          </div><img src="img/scooter_center.png" alt="">
         </div>
-        <div class="row text-center">
-            <div class="col-md-4 col-md-offset-4">
-                <a class="fixi-reg" href="#">
-                    <div class="fixi-button">зарегистрировать код</div>
-                </a>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-12 akrobat-reg">
-                Организатор акции — ООО «СОВА». Стимулирующее мероприятие в виде рекламной акции «Собери всех Фиксиков и получи гироскутер в подарок» действует на территории РФ. Не является лотереей. Общий период проведения стимулирующего мероприятия: с 04.09.2017 по 31.12.2017, включая период выдачи призов победителям. Регистрация промо-кодов осуществляется в период с 00 часов 00 минут 01 секунд 4 сентября 2017 года по 23 часа 59 минут 59 секунд 14 декабря 2017 года по московскому времени на сайте http://www.varta-consumer.ru. Обязательным условием участия в розыгрыше и получения главного приза (гироскутер) является вступление в сообщество Varta Consumer Russia в одной из 3-х социальных сетей и предъявление чека после розыгрыша. Подробные правила проведения, информация об организаторе, количестве призов, сроках, месте и порядке их вручения размещены на сайте: http://www.varta-consumer.ru. Количество призов ограничено. Призы могут отличаться от изображенных.
-            </div>
-        </div>
+        <div class="welcome_mechanics"><img src="img/mechanics.png" alt=""></div>
+      </div><a class="fixi-button" href="#">зарегистрировать код</a>
+      <div class="welcome_text akrobat-reg">Организатор акции — ООО «СОВА». Стимулирующее мероприятие в виде рекламной акции «Собери всех Фиксиков и получи гироскутер в подарок» действует на территории РФ. Не является лотереей. Общий период проведения стимулирующего мероприятия: с 04.09.2017 по 31.12.2017, включая период выдачи призов победителям. Регистрация промо-кодов осуществляется в период с 00 часов 00 минут 01 секунд 4 сентября 2017 года по 23 часа 59 минут 59 секунд 14 декабря 2017 года по московскому времени на сайте http://www.varta-consumer.ru. Обязательным условием участия в розыгрыше и получения главного приза (гироскутер) является вступление в сообщество Varta Consumer Russia в одной из 3-х социальных сетей и предъявление чека после розыгрыша. Подробные правила проведения, информация об организаторе, количестве призов, сроках, месте и порядке их вручения размещены на сайте: http://www.varta-consumer.ru.<br>Количество призов ограничено. Призы могут отличаться от изображенных.</div>
     </div>
-</div>
-
-<div data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;"  class="simka-parallax">
-
-</div>
-
-<div class="post-parallax cyan pre-parallax orange">
+  </div>
+  <div class="simka-parallax" data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;"></div>
+  <div class="post-parallax cyan pre-parallax orange">
     <div class="container mechanics">
-        <div class="row">
-            <div class="col-md-4 yellow bebasneue-reg">
-                <img src="img/1.png" alt="">
-                <div class="caption">Покупай батарейки <strong>VARTA</strong> с фиксиками</div>
-            </div>
-            <div class="col-md-4 yellow bebasneue-reg">
-                <img src="img/2.png" alt="">
-                <div class="caption">Регистрируй промокоды</div>
-            </div>
-            <div class="col-md-4 orange bebasneue-reg">
-                <img src="img/3.png" alt="">
-                <div class="caption">Выигрывай призы</div>
-            </div>
+      <div class="mechanics_steps">
+        <div class="mechanics_step yellow bebasneue-reg"><img src="img/1.png" alt="">
+          <div class="caption">Покупай батарейки<br><strong>VARTA</strong> с фиксиками</div>
         </div>
-
-        <div class="row prizes owl-carousel">
-            <div class="item">
-                <div class="col-md-5 text-center">
-                    <div class="title code fixi-reg">1 код</div>
-                    <img class="code" src="img/1code.png" alt="">
-                </div>
-                <div class="col-md-1 arrow">
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="title fixi-reg">3d раскраска</div>
-                    <img class="prize" src="img/1prize.png" alt="">
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-5 text-center">
-                    <div class="title code fixi-reg">2 кода</div>
-                    <img class="code" src="img/2code.png" alt="">
-                </div>
-                <div class="col-md-1 arrow">
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="title fixi-reg">игра</div>
-                    <img class="prize" src="img/2prize.png" alt="">
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-5 text-center">
-                    <div class="title code fixi-reg">3 кода</div>
-                    <img class="code" src="img/3codes.png" alt="">
-                </div>
-                <div class="col-md-1 arrow">
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="title fixi-reg">фонарик</div>
-                    <img class="prize" src="img/3prize.png" alt="">
-                </div>
-            </div>
-            <div class="item">
-                <div class="col-md-5 text-center">
-                    <div class="title code fixi-reg">4 кода</div>
-                    <img class="code" src="img/4codes.png" alt="">
-                </div>
-                <div class="col-md-1 arrow">
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="title fixi-reg">гироскутер</div>
-                    <img class="prize" src="img/4prize.png" alt="">
-                </div>
-            </div>
+        <div class="mechanics_step yellow bebasneue-reg"><img src="img/2.png" alt="">
+          <div class="caption">Регистрируй<br>промокоды</div>
         </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg hurryup">
-                С 4 сентября 2017 года по 25 декабря 2017 года при покупке от 1 упаковки стикерованного продукта покупатель получает возможность стать обладателем призов и выиграть главный приз <span class="prize">— гироскутер.</span> Розыгрыш проходит еженедельно.
-                <br> Спешите принять участие!
-            </div>
+        <div class="mechanics_step orange bebasneue-reg"><img src="img/3.png" alt="">
+          <div class="caption">Выигрывай<br>призы</div>
         </div>
-        <div class="row bebasneue-reg text-center">
-            <h4>Правила акции</h4>
+      </div>
+      <div class="row prizes owl-carousel">
+        <div class="item">
+          <div class="col-md-5 text-center">
+            <div class="title code fixi-reg">1 код</div><img class="code" src="img/1code.png" alt="">
+          </div>
+          <div class="col-md-1 arrow"></div>
+          <div class="col-md-6 text-center">
+            <div class="title fixi-reg">3d раскраска</div><img class="prize" src="img/1prize.png" alt="">
+          </div>
         </div>
-        <div class="row akrobat-reg">
-            <div class="col-md-6">
-                Если предварительно подвергнуть объекты длительному вакуумированию, то призма испускает плоскополяризованный атом как при нагреве, так и при охлаждении. Многочисленные расчеты предсказывают, а эксперименты подтверждают, что пульсар переворачивает взрыв. Исследователями из разных лабораторий неоднократно наблюдалось, как разрыв ускоряет гамма-квант. Течение среды конфокально тормозит.
-            </div>
-            <div class="col-md-6">
-                Фронт поглощает экранированный квазар. Среда параллельна. Зеркало концентрирует плоскополяризованный взрыв. В литературе неоднократно описано, как среда инструментально обнаружима. Многочисленные расчеты предсказывают, а эксперименты подтверждают, что темная материя коаксиально вращает лептон, даже если пока мы не можем наблюсти это непосредственно. Объект оптически стабилен.
-            </div>
+        <div class="item">
+          <div class="col-md-5 text-center">
+            <div class="title code fixi-reg">2 кода</div><img class="code" src="img/2code.png" alt="">
+          </div>
+          <div class="col-md-1 arrow"></div>
+          <div class="col-md-6 text-center">
+            <div class="title fixi-reg">игра</div><img class="prize" src="img/2prize.png" alt="">
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 bebasneue-reg text-center"><a href="#">Скачать полные правила (PDF)</a></div>
+        <div class="item">
+          <div class="col-md-5 text-center">
+            <div class="title code fixi-reg">3 кода</div><img class="code" src="img/3codes.png" alt="">
+          </div>
+          <div class="col-md-1 arrow"></div>
+          <div class="col-md-6 text-center">
+            <div class="title fixi-reg">фонарик</div><img class="prize" src="img/3prize.png" alt="">
+          </div>
         </div>
+        <div class="item">
+          <div class="col-md-5 text-center">
+            <div class="title code fixi-reg">4 кода</div><img class="code" src="img/4codes.png" alt="">
+          </div>
+          <div class="col-md-1 arrow"></div>
+          <div class="col-md-6 text-center">
+            <div class="title fixi-reg">гироскутер</div><img class="prize" src="img/4prize.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg hurryup">С 4 сентября 2017 года по 25 декабря 2017 года при покупке от 1 упаковки стикерованного продукта покупатель получает возможность стать обладателем призов и выиграть главный приз <span class="prize">— гироскутер.</span> Розыгрыш проходит еженедельно.<br> Спешите принять участие!</div>
+      </div>
+      <div class="row bebasneue-reg text-center">
+        <h4>Правила акции</h4>
+      </div>
+      <div class="row akrobat-reg mechanics_rules">
+        <div class="col-md-6">Если предварительно подвергнуть объекты длительному вакуумированию, то призма испускает плоскополяризованный атом как при нагреве, так и при охлаждении. Многочисленные расчеты предсказывают, а эксперименты подтверждают, что пульсар переворачивает взрыв. Исследователями из разных лабораторий неоднократно наблюдалось, как разрыв ускоряет гамма-квант. Течение среды конфокально тормозит.</div>
+        <div class="col-md-6">Фронт поглощает экранированный квазар. Среда параллельна. Зеркало концентрирует плоскополяризованный взрыв. В литературе неоднократно описано, как среда инструментально обнаружима. Многочисленные расчеты предсказывают, а эксперименты подтверждают, что темная материя коаксиально вращает лептон, даже если пока мы не можем наблюсти это непосредственно. Объект оптически стабилен.</div>
+      </div>
+      <div class="row mechanics_rules">
+        <div class="col-md-12 bebasneue-reg text-center"><a href="#">Скачать полные правила (PDF)</a></div>
+      </div>
     </div>
-</div>
-
-
-<div data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;" class="monster-parallax">
-
-</div>
-
-<div class="post-parallax pre-parallax blue green">
+  </div>
+  <div class="monster-parallax" data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;"></div>
+  <div class="post-parallax pre-parallax blue">
     <div class="container faq">
-        <div class="row">
-            <div class="col-md-12 text-center fixi-reg">
-                <h4>вопроСы и Ответы</h4>
-            </div>
+      <div class="row">
+        <div class="col-md-12 text-center fixi-reg">
+          <h4>вопроСы и Ответы</h4>
         </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 akrobat-reg">
-                <ul>
-                    <li class="question">Отклонение трансформирует гравитационный стабилизатор, исходя из общих теорем механики?</li>
-                    <li class="answer">Устойчивость горизонтальна. Гировертикаль трансформирует нестационарный момент силы трения, что обусловлено гироскопической природой явления.</li>
-                    <li class="question">Отклонение трансформирует гравитационный стабилизатор, исходя из общих теорем механики?</li>
-                    <li class="answer">Устойчивость горизонтальна. Гировертикаль трансформирует нестационарный момент силы трения, что обусловлено гироскопической природой явления.</li>
-                    <li class="question">Отклонение трансформирует гравитационный стабилизатор, исходя из общих теорем механики?</li>
-                    <li class="answer">Устойчивость горизонтальна. Гировертикаль трансформирует нестационарный момент силы трения, что обусловлено гироскопической природой явления.</li>
-                </ul>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 akrobat-reg">
+          <ul>
+            <li class="question">Отклонение трансформирует гравитационный стабилизатор, исходя из общих теорем механики?</li>
+            <li class="answer">Устойчивость горизонтальна. Гировертикаль трансформирует нестационарный момент силы трения, что обусловлено гироскопической природой явления.</li>
+            <li class="question">Следуя механической логике, электромеханическая система не входит своими составляющими?</li>
+            <li class="answer">В самом общем случае курс абсолютно стабилизирует параметр Родинга-Гамильтона. Отклонение поступательно проецирует гироскопический прибор.</li>
+            <li class="question">Механическая система, согласно третьему закону Ньютона, опасна?</li>
+            <li class="answer">Кинематическое уравнение Эйлера даёт большую проекцию на оси, чем нестационарный подвижный объект. Проекция на подвижные оси, в первом приближении, различна.</li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
-
-<div data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;" class="verta-parallax"></div>
-
-<div class="post-parallax green">
+  </div>
+  <div class="verta-parallax" data-bottom-top="background-position-y: 0%;" data-center-top="background-position-y: 30%;" data-top-bottom="background-position-y: 60%;"></div>
+  <div class="post-parallax green">
     <div class="container winners">
-        <div class="row">
-            <div class="col-md-12 text-center fixi-reg">
-                <h4>пОбедители</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center bebasneue-reg search_title">Поиск победителей по email</div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="search"><input class="bebasneue-reg" type="email" placeholder="Введите email"><button class="fixi-reg" type="button">поиск</button><button class="fixi-reg" type="button">х</button></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table bebasneue-reg borderless">
-                    <thead>
-                    <tr>
-                        <th>Дата</th>
-                        <th>Email</th>
-                        <th>Победитель</th>
-                        <th>Приз</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Дата</td>
-                        <td>Email</td>
-                        <td>Победитель</td>
-                        <td>Приз</td>
-                    </tr>
-                    <tr class="highlight">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container feedback">
-    <div class="row">
+      <div class="row">
         <div class="col-md-12 text-center fixi-reg">
-            <h4>Обратная Связь</h4>
+          <h4>пОбедители</h4>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <label for="name_feedback" class="bebasneue-reg">Имя:</label>
-            <input id="name_feedback" class="bebasneue-reg" type="text" placeholder="Укажите имя">
-            <label for="email_feedback" class="bebasneue-reg">Email:</label>
-            <input id="email_feedback" class="bebasneue-reg" type="email" placeholder="Укажите email">
-        </div>
-        <div class="col-md-8">
-            <label for="thread_feedback" class="bebasneue-reg">Тема:</label>
-            <input id="thread_feedback" class="bebasneue-reg" type="text" placeholder="Укажите тему">
-            <textarea class="bebasneue-reg" placeholder="Сообщение"></textarea>
-        </div>
-    </div>
-    <div class="row">
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center bebasneue-reg search_title">Поиск победителей по email</div>
+      </div>
+      <div class="row">
         <div class="col-md-12 text-center">
-            <button class="fixi-reg" type="button">отправить</button>
+          <div class="search">
+            <input class="bebasneue-reg" type="email" placeholder="Введите email">
+            <button class="fixi-reg" type="button">поиск</button>
+            <button class="fixi-reg" type="button">х</button>
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table bebasneue-reg borderless">
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Email</th>
+                <th>Победитель</th>
+                <th>Приз</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Дата</td>
+                <td>Email</td>
+                <td>Победитель</td>
+                <td>Приз</td>
+              </tr>
+              <tr class="highlight">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-</div>
-
-<div class="container map">
+  </div>
+  <div class="container feedback">
     <div class="row">
-        <div class="col-md-12 text-center fixi-reg">
-            <h4>гдЕ купить</h4>
-        </div>
+      <div class="col-md-12 text-center fixi-reg">
+        <h4>Обратная Связь</h4>
+      </div>
     </div>
-    <div id="map" style="width:100%; height: 500px;" ></div>
-</div>
-
-<div class="container register">
     <div class="row">
-        <div class="col-md-12 text-center fixi-reg">
-            <h4>региСтрация</h4>
-        </div>
+      <div class="col-md-4">
+        <label class="bebasneue-reg" for="name_feedback">Имя:</label>
+        <input class="bebasneue-reg" id="name_feedback" type="text" placeholder="Укажите имя">
+        <label class="bebasneue-reg" for="email_feedback">Email:</label>
+        <input class="bebasneue-reg" id="email_feedback" type="email" placeholder="Укажите email">
+      </div>
+      <div class="col-md-8">
+        <label class="bebasneue-reg" for="thread_feedback">Тема:</label>
+        <input class="bebasneue-reg" id="thread_feedback" type="text" placeholder="Укажите тему">
+        <textarea class="bebasneue-reg" placeholder="Сообщение"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button class="fixi-reg" type="button">отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="container map">
+    <div class="row">
+      <div class="col-md-12 text-center fixi-reg">
+        <h4>гдЕ купить</h4>
+      </div>
+    </div>
+    <div class="map_container"></div>
+  </div>
+  <div class="container register">
+    <div class="row">
+      <div class="col-md-12 text-center fixi-reg">
+        <h4>региСтрация</h4>
+      </div>
     </div>
     <div class="row social">
-        <div class="col-md-12 text-center bebasneue-reg">
-            Зарегистрироваться через:
-            <a href="#"><img src="img/vk2.png" alt=""></a>
-            <a href="#"><img src="img/fb2.png" alt=""></a>
-            <a href="#"><img src="img/ok2.png" alt=""></a>
-        </div>
+      <div class="col-md-12 text-center bebasneue-reg">Зарегистрироваться через:<a href="#"><img src="img/vk2.png" alt=""></a><a href="#"><img src="img/fb2.png" alt=""></a><a href="#"><img src="img/ok2.png" alt=""></a></div>
     </div>
     <div class="row space-above">
-        <div class="col-md-4">
-            <label for="name_register" class="bebasneue-reg">Имя:</label>
-            <input id="name_register" class="bebasneue-reg" type="text" placeholder="Укажите имя">
-        </div>
-        <div class="col-md-4 advice">
-            <label for="email_register" class="bebasneue-reg">Email:</label>
-            <input id="email_register" class="bebasneue-reg" type="email" placeholder="Укажите email">
-            <img src="img/advice.png" alt="">
-        </div>
-        <div class="col-md-4 advice">
-            <label for="phone_register" class="bebasneue-reg">Телефон (логин):</label>
-            <input id="phone_register" class="bebasneue-reg" type="tel" placeholder="+7 (___) ___-__-__">
-            <img src="img/advice.png" alt="">
-        </div>
-        <div class="col-md-4">
-            <label for="region_register" class="bebasneue-reg">Регион:</label>
-            <select id="region_register" class="bebasneue-reg">
-                <option value="">Укажите регион</option>
-                <option value="">Регион</option>
-                <option value="">Регион</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label for="city_register" class="bebasneue-reg">Город/Район:</label>
-            <select id="city_register" class="bebasneue-reg">
-                <option value="">Укажите город</option>
-                <option value="">город</option>
-                <option value="">город</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label for="bdate_register" class="bebasneue-reg">Дата рождения:</label>
-            <select id="bdate_register" class="bebasneue-reg">
-                <option value="">Укажите дату рождения</option>
-            </select>
-        </div>
+      <div class="col-md-4 register_input">
+        <label class="bebasneue-reg" for="name_register">Имя:</label>
+        <input class="bebasneue-reg" id="name_register" type="text" placeholder="Укажите имя">
+      </div>
+      <div class="col-md-4 advice register_input">
+        <label class="bebasneue-reg" for="email_register">Email:</label>
+        <input class="bebasneue-reg" id="email_register" type="email" placeholder="Укажите email"><img src="img/advice.png" alt="">
+      </div>
+      <div class="col-md-4 advice register_input">
+        <label class="bebasneue-reg" for="phone_register">Телефон (логин):</label>
+        <input class="bebasneue-reg" id="phone_register" type="tel" placeholder="+7 (___) ___-__-__"><img src="img/advice.png" alt="">
+      </div>
+      <div class="col-md-4 register_input">
+        <label class="bebasneue-reg" for="region_register">Регион:</label>
+        <select class="bebasneue-reg" id="region_register">
+          <option value="">Укажите регион</option>
+          <option value="">Регион</option>
+          <option value="">Регион</option>
+        </select>
+      </div>
+      <div class="col-md-4 register_input">
+        <label class="bebasneue-reg" for="city_register">Город/Район:</label>
+        <select class="bebasneue-reg" id="city_register">
+          <option value="">Укажите город</option>
+          <option value="">город</option>
+          <option value="">город</option>
+        </select>
+      </div>
+      <div class="col-md-4 register_input">
+        <label class="bebasneue-reg" for="bdate_register">Дата рождения:</label>
+        <select class="bebasneue-reg" id="bdate_register">
+          <option value="">Укажите дату рождения</option>
+        </select>
+      </div>
     </div>
     <div class="row space-above">
-        <div class="col-md-4">
-            <label for="sex_feedback" class="bebasneue-reg">Пол:</label>
-        </div>
+      <div class="col-md-4">
+        <label class="bebasneue-reg" for="sex_feedback">Пол:</label>
+      </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <input id="male" type="radio" name="sex_feedback" value="1">
-            <label for="male" class="bebasneue-reg">Мужской</label>
-            <input id="female" type="radio" name="sex_feedback" value="2">
-            <label for="female" class="bebasneue-reg">Женский</label>
-        </div>
+      <div class="col-md-4">
+        <input id="male" type="radio" name="sex_feedback" value="1" checked>
+        <label class="bebasneue-reg" for="male">Мужской</label>
+        <input id="female" type="radio" name="sex_feedback" value="2">
+        <label class="bebasneue-reg" for="female">Женский</label>
+      </div>
     </div>
     <div class="row">
-        <div class="col-md-12 text-left bebasneue-reg">
-            *Все поля обязательны для заполнения
-        </div>
+      <div class="col-md-12 text-left bebasneue-reg register_note"><sup>*</sup> Все поля обязательны для заполнения</div>
     </div>
     <div class="row space-above">
-        <div class="col-md-6">
-            <input id="read1" type="checkbox" name="read_feedback" value="1">
-            <label for="read1" class="bebasneue-reg">Я прочитал и согласен с правилами акции и пользовательским соглашением</label>
-        </div>
-        <div class="col-md-6">
-            <input id="read2" type="checkbox" name="read_feedback" value="1">
-            <label for="read2" class="bebasneue-reg">Я согласен получать информацию по SMS и Email</label>
-        </div>
+      <div class="col-md-4 register_check">
+        <input id="read1" type="checkbox" name="read_feedback" value="1">
+        <label class="bebasneue-reg" for="read1"><span>Я прочитал и согласен с <a href="#">правилами акции и пользовательским соглашением</a>.</span></label>
+      </div>
+      <div class="col-md-8 register_check">
+        <input id="read2" type="checkbox" name="read_feedback" value="1">
+        <label class="bebasneue-reg" for="read2">Я согласен получать информацию по SMS и Email.</label>
+      </div><a class="fixi-reg fixi-button" href="#">зарегистрироваться</a>
     </div>
-
-    <div class="row space-above text-center">
-        <div class="col-md-4 col-md-offset-4">
-            <a class="fixi-reg" href="#">
-                <div class="fixi-button">зарегистрироваться</div>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="fixics">
+  </div>
+  <div class="fixics">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <img class="fixic" src="img/fixics.png" alt="">
-            </div>
-        </div>
+      <div class="row">
+        <div class="col-md-12"><img class="fixic" src="img/fixics.png" alt=""></div>
+      </div>
     </div>
-</div>
-<div class="footer">
+  </div><img id="scroll" data-top="top:20%" data-bottom="top:40%" data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" src="img/scroll.png" alt="">
+  <div class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-12 bebasneue-reg">
-                        Если у вас возникли какие-либо вопросы, <br>
-                        Вы можете написать нам на почту promorus@eu.spectrumbrands.com
-                    </div>
-                    <div class="col-md-12 logo">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 text-right">
-                <a href="#"><img src="img/vk.png" alt=""></a>
-                <a href="#"><img src="img/fb.png" alt=""></a>
-                <a href="#"><img src="img/ok.png" alt=""></a>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12 bebasneue-reg">Если у вас возникли какие-либо вопросы,<br> Вы можете написать нам на почту <a href="mailto:promorus@eu.spectrumbrands.com" target="_blank">promorus@eu.spectrumbrands.com</a></div>
+            <div class="col-md-12 logo"></div>
+          </div>
         </div>
+        <div class="col-md-6 text-right"><a href="#"><img src="img/vk.png" alt=""></a><a href="#"><img src="img/fb.png" alt=""></a><a href="#"><img src="img/ok.png" alt=""></a></div>
+      </div>
     </div>
-</div>
-</body>
+  </div>
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/skrollr/dist/skrollr.min.js"></script>
+  <script src="vendor/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+  <script src="https://api-maps.yandex.ru/1.1/index.xml"></script>
+  <script src="js/app.min.js"></script>
+  <div class="modal fade bs-example-modal-lg" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <form action="personal.html">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="fixi-reg" aria-hidden="true">×</span></button>
+            <h4 class="modal-title fixi-reg">вход в личный кабинет</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row social">
+              <div class="col-md-12 text-center bebasneue-reg">Зарегистрироваться через:<a href="#"><img src="img/vk_white.png" alt=""></a><a href="#"><img src="img/fb_white.png" alt=""></a><a href="#"><img src="img/ok_white.png" alt=""></a></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+                <label class="bebasneue-reg" for="auth_email">Email:</label>
+                <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+              </div>
+              <div class="col-md-4 col-md-offset-4">
+                <label class="bebasneue-reg" for="auth_password">Пароль:</label>
+                <input class="bebasneue-reg" id="auth_password" type="password" placeholder="******">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 col-md-offset-4 text-left forgot"><a class="bebasneue-reg" data-dismiss="modal" data-toggle="modal" data-target="#forgot" href="#">забыли пароль?</a></div>
+              <div class="col-md-6">
+                <input class="white" id="remember_me" type="checkbox">
+                <label class="bebasneue-reg" for="remember_me">запомнить</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="fixi-button white" type="submit">войти</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal fade bs-example-modal-lg" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="fixi-reg" aria-hidden="true">×</span></button>
+          <h4 class="modal-title fixi-reg">восстановление пароля</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <label class="bebasneue-reg" for="auth_email">Email:</label>
+              <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="fixi-button white">отправить пароль</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade bs-example-modal-lg" id="notice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="fixi-reg" aria-hidden="true">×</span></button>
+          <h4 class="modal-title fixi-reg">ураа!</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12 text-center bebasneue-reg">Поздравляем!<br> Вы выиграли гироскутер. Для получения приза необходимо дозаполнить данные в личном кабинете.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="fixi-button white" type="submit">дрыц-тыц!</button>
+        </div>
+      </div>
+      <!-- /.modal-content-->
+    </div>
+  </div>
 </html>
-
-<script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="vendor/skrollr/dist/skrollr.min.js"></script>
-<script src="vendor/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
-<script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-<script type="text/javascript">
-    var s = skrollr.init({
-        forceHeight: false,
-        constants: {
-            //fill the box for a "duration" of 150% of the viewport (pause for 150%)
-            //adjust for shorter/longer pause
-            box: '150p'
-        }
-    });
-
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel(
-            {
-                nav:false,
-                loop: true,
-                items: 1,
-                autoplay: true,
-                autoplayTimeout:2500,
-                autoplayHoverPause:false
-            }
-        )
-    });
-
-</script>
-<script type="text/javascript">
-    // Создает обработчик события window.onLoad
-    YMaps.jQuery(function () {
-        // Создает экземпляр карты и привязывает его к созданному контейнеру
-        var map = new YMaps.Map(YMaps.jQuery("#map")[0]);
-
-        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-        map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
-    })
-</script>
-<div class="modal fade bs-example-modal-lg" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <form action="personal.html">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
-                    <h4 class="modal-title fixi-reg ">вход в личный кабинет</h4>
-                </div>
-                <div class="modal-body">
-
-                    <div class="row social">
-                        <div class="col-md-12 text-center bebasneue-reg">
-                            Зарегистрироваться через:
-                            <a href="#"><img src="img/vk_white.png" alt=""></a>
-                            <a href="#"><img src="img/fb_white.png" alt=""></a>
-                            <a href="#"><img src="img/ok_white.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <label for="auth_email" class="bebasneue-reg">Email:</label>
-                            <input class="bebasneue-reg" type="email" id="auth_email" placeholder="Укажите Email">
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-                            <label for="auth_password" class="bebasneue-reg">Пароль:</label>
-                            <input class="bebasneue-reg" type="password" id="auth_password" placeholder="******">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 col-md-offset-4 text-left forgot">
-                            <a class="bebasneue-reg" data-dismiss="modal" data-toggle="modal" data-target="#forgot" href="#">забыли пароль?</a>
-                        </div>
-                        <div class="col-md-6">
-                            <input class="white" type="checkbox" id="remember_me">
-                            <label class="bebasneue-reg" for="remember_me">запомнить</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="row text-center">
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="fixi-reg">
-                                <button type="submit" class="fixi-button white">войти</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </form>
-    </div>
-</div>
-<div class="modal fade bs-example-modal-lg" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
-                <h4 class="modal-title fixi-reg ">восстановление пароля</h4>
-            </div>
-            <div class="modal-body">
-
-
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <label for="auth_email" class="bebasneue-reg">Email:</label>
-                        <input class="bebasneue-reg" type="email" id="auth_email" placeholder="Укажите Email">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="row text-center">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="fixi-reg">
-                            <button class="fixi-button white">отправить пароль</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-
-<div class="modal fade bs-example-modal-lg" id="notice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fixi-reg">&times;</span></button>
-                <h4 class="modal-title fixi-reg ">ураа!</h4>
-            </div>
-            <div class="modal-body">
-
-
-                <div class="row">
-                    <div class="col-md-12 text-center bebasneue-reg">
-                        Поздравляем! <br>
-                        Вы выиграли гироскутер.
-                        Для получения приза необходимо дозаполнить данные в личном кабинете.
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="row text-center">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="fixi-reg">
-                            <button type="submit" class="fixi-button white">дрыц-тыц!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
