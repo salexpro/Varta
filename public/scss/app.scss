@@ -30,7 +30,6 @@ $url_2: url(../fonts/FixiFont-Regular.otf);
 $url_3: url(../img/varta.png);
 $url_4: url(../img/varta_footer.png);
 $url_5: url(../img/fixics_bg_new.png);
-$url_6: url(../img/button.png);
 $url_7: url(../img/button_white.png);
 $url_8: url(../img/arrow.png);
 $url_9: url(../img/question.png);
@@ -170,7 +169,6 @@ input, select {
 }
 #dates {
     color: $primary-color;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: rotate(-2deg);
     font-size: 40px;
     margin-left: 77px;
@@ -182,14 +180,21 @@ input, select {
     width: 100%;
     height: 136px;
     background-color: $color_energy_yellow_approx;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: rotate(-2deg);
     position: fixed;
     margin-top: -14px;
     top: 0;
     z-index: 500;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 -20px 0 20px $color_energy_yellow_approx;
+    transition: 500ms;
+    &.minimized{
+        margin-top: -64px;
+        .logo{
+            flex: 0 1 320px;
+            margin: 0 55px;
+            margin-top: 46px;
+        }
+    }
     .container {
         display: flex;
         height: 100%;
@@ -197,31 +202,42 @@ input, select {
     .logo {
         background: $url_3 no-repeat;
         background-size: contain;
-        flex: 0 1 456px;
+        flex: 0 1 430px;
         transform: rotate(2deg);
+        transition: 500ms;
     }
     .bebasneue-reg {
-        margin-left: -7px;
+        margin-left: -26px;
     }
-    ul {
+    .nav{
         list-style-type: none;
         margin-top: 98px;
         padding: 0;
-    }
-    li {
-        display: inline;
-        font-size: 28px;
-    }
-    a {
-        color: $black;
-        padding: 5px 5px 0 5px;
-        text-decoration: none;
-        &:hover {
-            background-color: $color_orange_approx;
-            color: $white;
+        li {
+            display: inline;
+            font-size: 28px;
+            &.active{
+                a{
+                    background-color: $color_orange_approx;
+                    color: $white;
+                }
+            }
+            a {
+                display: inline;
+                color: $black;
+                padding: 5px 5px 0 5px;
+                text-decoration: none;
+                background: none;
+                transition: 300ms;
+                &:hover {
+                    background-color: $color_orange_approx;
+                    color: $white;
+                }
+            }
         }
     }
 }
+
 .footer {
     height: 300px;
     background: $color_buttery_white_approx;
@@ -315,36 +331,147 @@ input, select {
     }
 }
 
+$primary-darken: darken($primary-color, 10%);
+
 .fixi-button {
-    background: $url_6 no-repeat;
-    background-size: contain;
-    background-position: center;
     color: $white;
-    height: 85px;
-    width: 480px;
+    min-width: 480px;
     font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: table;
     margin: auto;
     text-align: center;
-    padding-bottom: 10px;
     font-family: $font_2;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    z-index: 1;
     &:hover {
         color: $white;
+        &::before{
+            box-shadow: 32px -5px 0px 5px $primary-darken;
+            border-right-color: $primary-darken;
+        }
+        &::after{
+            border-left-color: $primary-darken;
+            box-shadow: -35px -1px 0px 1px $primary-darken;
+        }
+        span{
+            box-shadow: -6px -7px 0 $primary-darken, 11px -3px 0 -6px $primary-darken;
+            &::after{
+                background-color: $primary-darken;
+            }
+        }
     }
     &:focus {
         color: $white;
     }
+    &::before{
+        content: '';
+        transform: rotate(-4deg);
+        width: 0;
+        height: 54%;
+        box-sizing: content-box;
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        border: 34px solid rgba(0, 0, 0, 0);
+        border-left: 0;
+        border-right-color: $primary-color;
+        box-shadow: 32px -5px 0px 5px $primary-color;
+        border-top-width: 20px;
+        border-bottom-width: 20px;
+        z-index: -1;
+        transition: 300ms;
+    }
+    &::after{
+        content: '';
+        transform: rotate(-2.5deg);
+        width: 0;
+        height: 43%;
+        box-sizing: content-box;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        border: 34px solid rgba(0, 0, 0, 0);
+        border-right: 0;
+        border-left-color: $primary-color;
+        box-shadow: -35px -1px 0px 1px $primary-color;
+        border-top-width: 20px;
+        border-bottom-width: 20px;
+        z-index: -1;
+        transition: 300ms;
+    }
     &.white {
-        background: $url_7 no-repeat;
+        min-width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         color: $primary-color;
+        // &:hover {
+        //     color: $white;
+        //     &::before{
+        //         box-shadow: 32px -5px 0px 5px $primary-darken;
+        //         border-right-color: $primary-darken;
+        //     }
+        //     &::after{
+        //         border-left-color: $primary-darken;
+        //         box-shadow: -35px -1px 0px 1px $primary-darken;
+        //     }
+        //     span{
+        //         box-shadow: -6px -7px 0 $primary-darken, 11px -3px 0 -6px $primary-darken;
+        //         &::after{
+        //             background-color: $primary-darken;
+        //         }
+        //     }
+        // }
+        &::before{
+            border-right-color: $white;
+            box-shadow: 32px -5px 0px 5px $white;
+        }
+        &::after{
+            border-left-color: $white;
+            box-shadow: -35px -1px 0px 1px $white;
+        }
+        span{
+            padding-left: 60px;
+            padding-right: 60px;
+            box-shadow: -6px -7px 0 $white, 11px -3px 0 -6px $white;
+            &::after{
+                background: $white;
+            }
+        }
+    }
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 84.3%;
+        height: 100%;
+        margin-left: 8%;
+        overflow: hidden;
+        position: relative;
+        box-shadow: -6px -7px 0 $primary-color, 11px -3px 0 -6px $primary-color;
+        padding-bottom: 25px;
+        padding-top: 18px;
+        transition: 300ms;
+        &::after{
+            position: absolute;
+            top: 0;
+            left: -9.5%;
+            content: '';
+            width: 222%;
+            height: 100%;
+            background: $primary-color;
+            border-bottom-right-radius: 170% 134%;
+            z-index: -1;
+            transition: 300ms;
+        }
     }
 }
 
 .mechanics {
-    padding-top: 75px;
+    padding-top: 125px;
     padding-bottom: 55px;
     color: $primary-color;
     .hurryup {
@@ -423,7 +550,7 @@ input, select {
 }
 
 .faq {
-    padding-top: 70px;
+    padding-top: 120px;
     padding-bottom: 38px;
     h4 {
         color: $primary-color;
@@ -453,7 +580,8 @@ input, select {
 }
 
 .winners {
-    padding-top: 64px;
+    padding-top: 114px;
+    margin-bottom: 40px;
     h4 {
         color: $primary-color;
         font-size: 53px;
@@ -566,7 +694,7 @@ select {
             height: 85px;
         }
         &.white + label {
-            background: $url_12 0 0 no-repeat;
+            background-image: $url_12;
         }
     }
     + label {
@@ -585,7 +713,7 @@ select {
         }
     }
     &.white + label {
-        background: $url_11 0 0 no-repeat;
+        background-image: $url_11;
     }
 }
 
@@ -606,7 +734,8 @@ select {
 }
 
 .feedback {
-    padding-top: 150px;
+    padding-top: 110px;
+    margin-bottom: 64px;
     textarea {
         width: 100%;
         max-width: 100%;
@@ -636,7 +765,8 @@ select {
 }
 
 .map{
-    padding-top: 174px;
+    padding-top: 110px;
+    margin-bottom: 36px;
     h4 {
         color: $primary-color;
         font-size: 53px;
@@ -651,7 +781,7 @@ select {
 
 .register {
     color: $primary-color;
-    padding-top: 146px;
+    padding-top: 110px;
     h4 {
         color: $primary-color;
         font-size: 53px;

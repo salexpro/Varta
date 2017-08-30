@@ -15,7 +15,7 @@ $(window).scroll(function(){
         $('.header').removeClass('minimized');
     }
 })
-$('#navbar a').click(function(e){
+$('#navbar a:not([data-toggle])').click(function(e){
     e.preventDefault();
     var target = $(this).attr('href').substr(1),
         offset = $('#' + target).offset().top;

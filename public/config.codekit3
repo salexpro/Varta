@@ -300,28 +300,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/button.png": {
-		"ft": 32768,
-		"iS": 2423,
-		"oA": 0,
-		"oAP": "\/img\/button.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/button_white.png": {
-		"ft": 32768,
-		"iS": 2437,
-		"oA": 0,
-		"oAP": "\/img\/button_white.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/checked.png": {
 		"ft": 32768,
 		"iS": 2679,
@@ -410,33 +388,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/fixics_bg.png": {
-		"ft": 32768,
-		"iS": 1349702,
-		"oA": 0,
-		"oAP": "\/img\/fixics_bg.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/fixics_bg_new.png": {
 		"ft": 32768,
 		"iS": 1307299,
 		"oA": 0,
 		"oAP": "\/img\/fixics_bg_new.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/fixiki_center.png": {
-		"ft": 32768,
-		"iS": 777194,
-		"oA": 0,
-		"oAP": "\/img\/fixiki_center.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
