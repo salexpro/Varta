@@ -3,7 +3,7 @@ $color_chambray_approx: #284292;
 $color_deep_cove_approx: #030c3e;
 $primary-color: #eebd1c;
 $white: #fff;
-$color_deep_sapphire_approx: #152666;
+$color_deep_sapphire_approx: #234291;
 $color_energy_yellow_approx: #fce359;
 $black: #000;
 $color_orange_approx: #ff6913;
@@ -91,67 +91,7 @@ button {
 input, select {
     outline: none;
 }
-.modal-header {
-    border: none !important;
-    h4 {
-        font-size: 32px !important;
-    }
-}
-.modal-footer {
-    border: none !important;
-}
-.modal-content {
-    background-color: $primary-color !important;
-    position: relative;
-    border: none !important;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: none !important;
-    color: $white !important;
-    input {
-        width: 100%;
-    }
-    label {
-        font-size: 22px;
-    }
-    a {
-        color: $white;
-        text-decoration: underline;
-        &:hover {
-            color: $white;
-            text-decoration: underline;
-        }
-    }
-    .forgot {
-        font-size: 18px;
-        padding-top: 40px;
-    }
-}
-.modal-content::after {
-    content: '';
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    bottom: 0;
-    //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
-    transform-origin: right bottom;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-    transform: skewY(-3.5deg);
-}
-.modal-content::before {
-    content: '';
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
-    transform-origin: right top;
-    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-    transform: skewY(1.5deg);
-}
+
 .bebasneue-reg {
     font-family: $font_0;
 }
@@ -942,28 +882,156 @@ select {
     background: $url_17 no-repeat;
     background-size: cover;
 }
-.modal .close {
-    font-size: 36px !important;
-    color: $color_deep_sapphire_approx !important;
-    opacity: 1;
-    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    text-shadow: none;
-}
-#notice .modal-body {
-    color: $color_deep_sapphire_approx !important;
-    font-size: 22px;
-}
-#login .social {
-    font-size: 18px;
-    img {
-        margin-left: 18px;
-        width: 50px;
+
+#notice{
+    h4{
+        font-size: 53px;
+        top: 10px;
+    }
+    .modal-body {
+        color: $color_deep_sapphire_approx;
+        font-size: 30px;
+        padding: 40px;
+    }
+    .fixi-button {
+        width: 300px;
+        padding-left: 17px;
+        padding-right: 16px;
+        span{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .close{
+        margin-top: 4px;
     }
 }
+
 #forgot .fixi-button {
-    font-size: 22px !important;
+    width: 420px;
+    padding-left: 6px;
+    padding-right: 6px;
+    span{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 span.prize {
     color: $color_orange_approx;
+}
+
+.modal{
+    &-lg{
+        width: 990px;
+    }
+    &-dialog{
+        margin: 60px auto;
+    }
+    &-header {
+        border: none;
+        padding: 15px 26px;
+        h4 {
+            font-size: 32px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+    &-content {
+        background-color: $primary-color;
+        position: relative;
+        border: none;
+        box-shadow: none;
+        color: $white;
+        border-bottom-left-radius: 8% 400%;
+        border-bottom-right-radius: 8% 400%;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 27px;
+            position: absolute;
+            background: inherit;
+            z-index: -1;
+            top: 0;
+            transform-origin: right top;
+            transform: skewY(1.5deg);
+        }
+        &::after {
+            content: '';
+            width: 98.6%;
+            height: 150px;
+            position: absolute;
+            background: inherit;
+            z-index: -1;
+            bottom: 0;
+            left: 0.8%;
+            transform-origin: right bottom;
+            transform: skewY(-0.8deg);
+        }
+        input {
+            width: 100%;
+            border-color: $white;
+            margin-bottom: 35px;
+            color: $color_deep_sapphire_approx;
+        }
+        label {
+            font-size: 30px;
+            line-height: 1.1;
+        }
+        a {
+            color: $white;
+            text-decoration: underline;
+            &:hover {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        .forgot {
+            font-size: 18px;
+            padding-top: 40px;
+        }
+    }
+    &_form{
+        width: 360px;
+        margin: auto;
+        margin-top: 37px;
+        font-size: 30px;
+        &_footer{
+            margin: 15px -33px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            label{
+                background-size: 40px auto;
+                padding-left: 57px;
+                padding-top: 23px;
+                height: 64px !important;
+                margin-top: -20px;
+
+            }
+        }
+    }
+    &_social{
+        span{
+            font-size: 30px;
+            margin-right: 15px;
+        }
+        a{
+            margin-left: 25px;
+        }
+    }
+    &-footer {
+        border: none;
+        padding-bottom: 38px;
+    }
+    .close {
+        position: relative;
+        z-index: 2;
+        font-size: 53px;
+        color: $color_deep_sapphire_approx;
+        opacity: 1;
+        text-shadow: none;
+        margin-top: -6px;
+    }
 }
