@@ -22,7 +22,11 @@
                         label.bebasneue-reg(for='auth_password') Пароль:
                         input#auth_password.bebasneue-reg(type='password', placeholder='******')
                         .modal_form_footer
-                            a.bebasneue-reg(data-dismiss='modal', data-toggle='modal', data-target='#forgot', href='#') забыли пароль?
+                            div
+                                a.bebasneue-reg(data-dismiss='modal', data-toggle='modal', data-target='#forgot', href='#')
+                                    | Забыли пароль?
+                                a.bebasneue-reg(data-dismiss='modal' href='#register')
+                                    | Зарегистрироваться
                             input#remember_me.white(type='checkbox')
                             label.bebasneue-reg(for='remember_me') запомнить
                 .modal-footer

@@ -142,8 +142,8 @@
 		"oA": 0,
 		"oAP": "\/img\/1code.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -153,8 +153,8 @@
 		"oA": 0,
 		"oAP": "\/img\/1prize.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -169,21 +169,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/240x400.jpg": {
-		"ft": 16384,
-		"iS": 70336,
-		"oA": 0,
-		"oAP": "\/img\/240x400.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/img\/2code.png": {
+	"\/img\/2codes.png": {
 		"ft": 32768,
-		"iS": 57905,
+		"iS": 60708,
 		"oA": 0,
-		"oAP": "\/img\/2code.png",
+		"oAP": "\/img\/2codes.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -218,8 +208,8 @@
 		"oA": 0,
 		"oAP": "\/img\/3codes.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -229,8 +219,8 @@
 		"oA": 0,
 		"oAP": "\/img\/3prize.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -240,8 +230,8 @@
 		"oA": 0,
 		"oAP": "\/img\/4codes.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -333,17 +323,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/fb2.png": {
-		"ft": 32768,
-		"iS": 2253,
-		"oA": 0,
-		"oAP": "\/img\/fb2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/fb_white.png": {
 		"ft": 32768,
 		"iS": 1949,
@@ -417,7 +396,7 @@
 		"oAP": "\/img\/inset_monster.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/inset_simka.jpg": {
@@ -427,17 +406,17 @@
 		"oAP": "\/img\/inset_simka.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/inset_verta.jpg": {
 		"ft": 16384,
-		"iS": 495805,
+		"iS": 898295,
 		"oA": 0,
 		"oAP": "\/img\/inset_verta.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/mechanics.png": {
@@ -446,8 +425,8 @@
 		"oA": 0,
 		"oAP": "\/img\/mechanics.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -456,17 +435,6 @@
 		"iS": 2551,
 		"oA": 0,
 		"oAP": "\/img\/ok.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/ok2.png": {
-		"ft": 32768,
-		"iS": 3082,
-		"oA": 0,
-		"oAP": "\/img\/ok2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -482,6 +450,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/pager.jpg": {
+		"ft": 16384,
+		"iS": 1065,
+		"oA": 0,
+		"oAP": "\/img\/pager.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/question.png": {
@@ -511,6 +489,148 @@
 		"iS": 3424,
 		"oA": 0,
 		"oAP": "\/img\/scroll.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/select.jpg": {
+		"ft": 16384,
+		"iS": 1546,
+		"oA": 0,
+		"oAP": "\/img\/select.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/simka.png": {
+		"ft": 32768,
+		"iS": 275450,
+		"oA": 0,
+		"oAP": "\/img\/simka.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks.png": {
+		"ft": 32768,
+		"iS": 484883,
+		"oA": 0,
+		"oAP": "\/img\/sparks.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/3prize.png": {
+		"ft": 32768,
+		"iS": 400991,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/3prize.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/monster_1.png": {
+		"ft": 32768,
+		"iS": 7022,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/monster_1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/monster_2.png": {
+		"ft": 32768,
+		"iS": 7440,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/monster_2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/simka_1.png": {
+		"ft": 32768,
+		"iS": 3921,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/simka_1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/simka_2.png": {
+		"ft": 32768,
+		"iS": 2801,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/simka_2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/simka_3.png": {
+		"ft": 32768,
+		"iS": 3761,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/simka_3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/verta_1.png": {
+		"ft": 32768,
+		"iS": 4088,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/verta_1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/verta_2.png": {
+		"ft": 32768,
+		"iS": 2790,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/verta_2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks\/verta_3.png": {
+		"ft": 32768,
+		"iS": 6516,
+		"oA": 0,
+		"oAP": "\/img\/sparks\/verta_3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/sparks_front.png": {
+		"ft": 32768,
+		"iS": 268536,
+		"oA": 0,
+		"oAP": "\/img\/sparks_front.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -561,22 +681,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/vk.png": {
+	"\/img\/verta.png": {
 		"ft": 32768,
-		"iS": 2508,
+		"iS": 329414,
 		"oA": 0,
-		"oAP": "\/img\/vk.png",
+		"oAP": "\/img\/verta.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/vk2.png": {
+	"\/img\/vk.png": {
 		"ft": 32768,
-		"iS": 2995,
+		"iS": 2508,
 		"oA": 0,
-		"oAP": "\/img\/vk2.png",
+		"oAP": "\/img\/vk.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

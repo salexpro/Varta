@@ -15,10 +15,11 @@ $(window).scroll(function(){
         $('.header').removeClass('minimized');
     }
 })
-$('#navbar a:not([data-toggle])').click(function(e){
+
+$('#navbar a:not([data-toggle]), .modal_form_footer a:not([data-toggle]), .logo').click(function(e){
     e.preventDefault();
     var target = $(this).attr('href').substr(1),
-        offset = $('#' + target).offset().top;
+        offset = target ? $('#' + target).offset().top : 0;
     $('html, body').animate({ 
         scrollTop: offset
     }, 500);
@@ -35,9 +36,9 @@ $(".owl-carousel").owlCarousel({
 })
 
 // Карта
-YMaps.jQuery(function() {
-    // Создает экземпляр карты и привязывает его к созданному контейнеру
-    var map = new YMaps.Map(YMaps.jQuery(".map_container")[0]);
-    // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-    map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
-})
+// YMaps.jQuery(function() {
+//     // Создает экземпляр карты и привязывает его к созданному контейнеру
+//     var map = new YMaps.Map(YMaps.jQuery(".map_container")[0]);
+//     // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+//     map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+// })
