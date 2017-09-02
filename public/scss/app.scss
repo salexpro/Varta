@@ -1095,7 +1095,7 @@ select{
         }
     }
     &--verta{
-        background: $url_17 no-repeat;
+        background-image: $url_17;
         .parallax{
             &_spark{
                 &:first-child{
@@ -1163,18 +1163,149 @@ select{
     }
 }
 
-@media(max-width: 1600px) {
-    .simka-parallax {
-        background-size: 150%;
-        background-position: 50% 50%;
+.profile{
+    margin-top: 50px;
+    color: $primary-color;
+    font-family: $font_0;
+    font-size: 30px;
+    button, [type="submit"]{
+        background-color: $primary-color;
+        border: none;
+        color: $white;
+        padding: 10px 22px 8px;
+        font-size: 25px;
+        font-family: $font_2;
+        transition: 300ms;
+        &:hover{
+            background-color: $primary-darken;
+        }
     }
-    .monster-parallax {
-        background-size: 150%;
-        background-position: 50% 50%;
+    h4 {
+        font-size: 53px;
+        text-align: center;
+        margin: 0;
+        margin-top: 105px;
+        margin-bottom: 18px;
+        color: $primary-color;
+        font-family: $font_2;
     }
-    .verta-parallax {
-        background-size: 150%;
-        background-position: 50% 50%;
+    &_welcome{
+        text-align: center;
+        position: relative;
+        margin-bottom: 65px;
+        a{
+            position: absolute;
+            right: 0;
+        }
+    }
+    &_form{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        &--right{
+            justify-content: flex-end;
+        }
+        &--textarea{
+            display: block;
+            textarea{
+                display: block;
+                margin-top: 29px;
+                width: 100%;
+                max-width: 100%;
+            }
+            &_row{
+                margin-top: 10px;
+                align-items: flex-start;
+                textarea{
+                    margin-left: 18px;
+                    margin-top: -10px;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        input{
+            &[type="text"]:not([size]){
+                width: 100%;
+            }
+            &:nth-child(1){
+                margin-left: 18px;
+            }
+            &:last-child{
+                margin-left: 35px;
+            }
+            &:nth-child(2){
+                margin-left: 20px;    
+            }
+        }
+    }
+    &_personal{
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        table{
+            width: 100%;
+            th{
+                padding-bottom: 20px;
+            }
+        }
+        &_header{
+            margin-bottom: 24px;
+            span{
+                color: #fe6b25;
+            }
+        }
+    }
+    &_header{
+        margin-bottom: 26px;
+    }
+    &_mycodes{
+        margin-bottom: 50px;
+        &_content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 170px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: 220px;
+            margin-bottom: 14px;
+        }
+        li{
+            &:last-child{
+                color: #fe6b25;
+            }
+        }
+    }
+    &_data{
+        margin-bottom: 40px;
+        .profile_form{
+            margin-bottom: 32px;
+        }
+    }
+    &_passport{
+        .profile_form{
+            margin-bottom: 32px;
+        }
+    }
+    &_footer{
+        margin-top: 56px;
+        text-align: center;
+        input{
+            width: 300px;
+        }
+    }
+}
+
+.file{
+    display: flex;
+    button{
+        margin-left: 37px;
     }
 }
 

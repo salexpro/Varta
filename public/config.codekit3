@@ -786,6 +786,20 @@
 		"oF": 2,
 		"oS": 0
 		},
+	"\/pug\/profile.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/pug\/profile.html",
+		"oF": 0
+		},
+	"\/pug\/profile.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/profile.html",
+		"oF": 2,
+		"oS": 0
+		},
 	"\/scss\/app.scss": {
 		"aP": 1,
 		"bl": 0,

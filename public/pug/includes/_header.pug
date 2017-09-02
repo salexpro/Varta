@@ -6,7 +6,10 @@
                 li
                     a(href='#prizes') Правила и призы
                 li
-                    a(href='#register') Регистрация
+                    if page=='main'
+                        a(href='#register') Регистрация
+                    else
+                        a(href='#') Профиль
                 li
                     a(href='#winners') Победители
                 li
@@ -16,4 +19,7 @@
                 li
                     a(href='#map') Где купить
                 li
-                    a(href="#" data-toggle="modal" data-target="#login") Вход
+                    if page=='main'
+                        a(href="#" data-toggle="modal" data-target="#login") Вход
+                    else
+                        a(href="/") Выход
