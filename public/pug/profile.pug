@@ -11,7 +11,7 @@ html(lang='ru')
                 a(href="/")
                     | Выйти
             .row.profile_personal
-                .col-md-6
+                .col-md-6.col-xs-12
                     table
                         tr
                             th(colspan="2")
@@ -31,7 +31,7 @@ html(lang='ru')
                         tr
                             td Телефон:
                             td +7 910 392 43 87
-                .col-md-6.profile_personal_codes
+                .col-md-6.col-sm-12.profile_personal_codes
                     .profile_personal_header
                         | Вам остлось зарегистрировать 
                         span 2 кода
@@ -63,29 +63,29 @@ html(lang='ru')
                 .profile_header
                     | Добавление данных для получения приза:
                 .row.profile_data_content
-                    .col-md-4.profile_form
+                    .col-md-4.col-sm-6.profile_form
                         | Индекс:
                         input(type="text" placeholder="141406" size="5")
-                    .col-md-4.profile_form
+                    .col-md-4.col-sm-6.profile_form
                         | Регион:
                         input(type="text" placeholder="Московская область")
-                    .col-md-4.profile_form
+                    .col-md-4.col-sm-6.profile_form
                         | Район:
                         input(type="text" placeholder="Воскресенский")
-                    .col-md-4.profile_form
+                    .col-md-4.col-sm-6.profile_form
                         | Город:
                         input(type="text" placeholder="Воскресенск" size="12")
-                    .col-md-4.profile_form.profile_form--right
+                    .col-md-4.col-sm-6.profile_form.profile_form--right
                         | Улица:
                         input(type="text" placeholder="Поперечная" size="15")
-                    .col-md-4.profile_form.profile_form--right
+                    .col-md-4.col-sm-6.profile_form.profile_form--right
                         | Дом/Корпус:
                         input(type="text" placeholder="125" size="3")
                         input(type="text" placeholder="52" size="3")
-                    .col-md-7.profile_form.profile_form--textarea
-                        | Дополнение к адрес:
+                    .col-md-7.col-sm-6.profile_form.profile_form--textarea
+                        | Дополнение к адресу:
                         textarea(name="" rows="4" placeholder="Дополнение")
-                    .col-md-5.profile_form.profile_form--right
+                    .col-md-5.col-sm-6.profile_form.profile_form--right
                         | Строение/Квартира:
                         input(type="text" placeholder="108" size="3")
                         input(type="text" placeholder="358" size="3")
@@ -93,30 +93,30 @@ html(lang='ru')
                 .profile_header
                     | Паспортные данные:
                 .row.profile_passport_content
-                    .col-md-3.profile_form
+                    .col-sm-3.col-xs-6.profile_form
                         | Серия:
                         input(type="text" placeholder="5269")
-                    .col-md-3.profile_form
+                    .col-sm-3.col-xs-6.profile_form
                         | Номер:
                         input(type="text" placeholder="325695")
-                    .col-md-6.profile_form
+                    .col-md-6.col-sm-12.profile_form
                         | Кем выдан:
                         input(type="text" placeholder="Воскресенским УВД Московской области")
-                    .col-md-4.profile_form
+                    .col-md-4.col-sm-6.profile_form
                         | Дата выдачи:
                         input(type="text" placeholder="12.05.2003")
-                    .col-md-4.profile_form
+                    .col-md-5.col-sm-6.profile_form
                         | Код подразделения:
                         input(type="text" placeholder="105-523")        
-                    .col-md-8.profile_form.profile_form--textarea_row
+                    .col-md-8.col-sm-12.profile_form.profile_form--textarea_row
                         | Адрес прописки:
                         textarea(name="" rows="4" placeholder="Адрес прописки")
-                    .col-md-8.profile_form
+                    .col-md-8.col-sm-12.profile_form.profile_form--file
                         | Скан паспорта:
                         .file
                             input(type="text" placeholder="C:\Documents\pasport.jpg" readonly)
                             button обзор
-                    .col-md-12.profile_footer
+                    .col-sm-12.profile_footer
                         input(type="submit" value="добавить")
         include includes/_modals
         include includes/_footer

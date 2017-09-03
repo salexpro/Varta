@@ -279,7 +279,7 @@ input, select {
         top: 39px;
     }
     @media (max-width: 480px){
-        top: 27px;
+        top: 29px;
         right: 13px;
     }
     &::after {
@@ -1839,6 +1839,9 @@ select{
     color: $primary-color;
     font-family: $font_0;
     font-size: 30px;
+    @media (max-width: 991px){
+        font-size: 23px;
+    }
     button, [type="submit"]{
         background-color: $primary-color;
         border: none;
@@ -1850,6 +1853,10 @@ select{
         &:hover{
             background-color: $primary-darken;
         }
+        @media (max-width: 991px){
+            padding: 8px 22px 6px;
+            font-size: 23px;
+        }
     }
     h4 {
         font-size: 53px;
@@ -1859,14 +1866,32 @@ select{
         margin-bottom: 18px;
         color: $primary-color;
         font-family: $font_2;
+        @media (max-width: 991px){
+            font-size: 42px;
+            margin-top: 40px;
+        }
+        @media (max-width: 767px){
+            margin-top: 20px;
+        }
     }
     &_welcome{
         text-align: center;
         position: relative;
         margin-bottom: 65px;
+        @media (max-width: 767px){
+            margin-bottom: 40px;
+        }
+        @media (max-width: 480px){
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
         a{
             position: absolute;
             right: 0;
+            @media (max-width: 480px){
+                position: static;
+            }
         }
     }
     &_form{
@@ -1883,19 +1908,32 @@ select{
                 margin-top: 29px;
                 width: 100%;
                 max-width: 100%;
+                @media (max-width: 767px){
+                    margin-top: 0;
+                }
             }
             &_row{
                 margin-top: 10px;
                 align-items: flex-start;
+                @media (max-width: 480px){
+                    display: block;
+                }
                 textarea{
                     margin-left: 18px;
                     margin-top: -10px;
                     width: 100%;
                     max-width: 100%;
+                    @media (max-width: 480px){
+                        display: block;
+                        margin: 0;
+                    }
                 }
             }
         }
         input{
+            @media (max-width: 1229px){
+                width: 100%;
+            }
             &[type="text"]:not([size]){
                 width: 100%;
             }
@@ -1910,12 +1948,29 @@ select{
             }
         }
         &--code{
+            @media (max-width: 480px){
+                flex-wrap: wrap;
+            }
             input{
                 &:nth-child(1){
                     margin: 0;
+                    @media (max-width: 480px){
+                        margin-bottom: 10px;
+                    }
                 }
                 &:last-child{
                     margin-left: 35px;
+                    @media (max-width: 480px){
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        &--file{
+            @media (max-width: 480px){
+                flex-wrap: wrap;
+                input:nth-child(1){
+                    margin: 0;
                 }
             }
         }
@@ -1924,6 +1979,11 @@ select{
         margin-bottom: 80px;
         display: flex;
         align-items: center;
+        @media (max-width: 991px){
+            flex-wrap: wrap;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
         table{
             width: 100%;
             th{
@@ -1936,17 +1996,31 @@ select{
                 color: #fe6b25;
             }
         }
+        &_codes{
+            @media (max-width: 991px){
+                margin-top: 20px;
+            }
+        }
     }
     &_header{
         margin-bottom: 26px;
     }
     &_mycodes{
         margin-bottom: 50px;
+        @media (max-width: 480px){
+            margin-bottom: 40px;
+        }
         &_content{
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             height: 170px;
+            @media (max-width: 991px){
+                height: 140px;
+            }
+            @media (max-width: 480px){
+                height: auto;
+            }
         }
         ul{
             margin: 0;
@@ -1956,6 +2030,15 @@ select{
             justify-content: space-between;
             width: 220px;
             margin-bottom: 14px;
+            @media (max-width: 767px){
+                width: 160px;
+                margin-right: 10px;
+            }
+            @media (max-width: 480px){
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
         }
         li{
             &:last-child{
@@ -1965,6 +2048,18 @@ select{
     }
     &_data{
         margin-bottom: 40px;
+        @media (max-width: 480px){
+            margin-bottom: 30px;
+        }
+        &_content{
+            @media (max-width: 767px){
+                display: flex;
+                flex-direction: column;
+                .profile_form--textarea{
+                    order: 2
+                }
+            }
+        }
         .profile_form{
             margin-bottom: 32px;
         }
@@ -1977,16 +2072,25 @@ select{
     &_footer{
         margin-top: 56px;
         text-align: center;
+        @media (max-width: 991px){
+            margin-top: 20px;
+        }
         input{
             width: 300px;
+            @media (max-width: 991px){
+                width: 200px;
+            }
         }
     }
 }
 
 .file{
-    display: flex;
+    display: flex;  
     button{
         margin-left: 37px;
+        @media (max-width: 480px){
+            margin-left: 15px;
+        }
     }
 }
 
