@@ -401,6 +401,27 @@ input, select, textarea {
     padding-top: 20px;
     margin-top: -20px;
     overflow: hidden;
+    @keyframes tada-center {
+      from {
+        transform: scale3d(1, 1, 1) rotate(-6deg);
+      }
+
+      10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -9deg);
+      }
+
+      30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      }
+
+      40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -9deg);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1) rotate(-6deg);
+      }
+    }
     .center-text {
         color: $color_lemon_approx;
         line-height: 55px;
@@ -410,6 +431,10 @@ input, select, textarea {
         display: table;
         z-index: 2;
         position: relative;
+        animation-name: tada-center;
+        animation-delay: 2s;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
         @media (max-width: 767px){
             margin-left: -17px;
         }
@@ -1620,6 +1645,7 @@ select{
                     width: 137px;
                     height: 103px;
                     background-image: url(../img/sparks/simka_1.png);
+                    animation-duration: .7s;
                     @media (max-width: 991px){
                         left: 12.1vw;
                     }
@@ -1630,6 +1656,7 @@ select{
                     width: 127px;
                     height: 90px;
                     background-image: url(../img/sparks/simka_2.png);
+                    animation-delay: .5s;
                     @media (max-width: 991px){
                         right: 18.3vw;
                     }
@@ -1646,6 +1673,23 @@ select{
                     }
                 }
             }
+            @keyframes hvr-hang {
+                0% {
+                    transform: translate(-50%, calc(-8px - 50%));
+                }
+                50% {
+                    transform: translate(-50%, calc(4px - 50%));
+                }
+                100% {
+                    transform: translate(-50%, calc(-8px - 50%));
+                }
+            }
+
+            @keyframes hvr-hang-sink {
+                100% {
+                    transform: translate(calc(8px - 50%));
+                }
+            }
             &_character{
                 width: 475px;
                 height: 679px;
@@ -1653,6 +1697,13 @@ select{
                 top: 50%;
                 transform: translate(-50%, -50%);
                 background-image: url(../img/simka.png);
+                animation-name: hvr-hang-sink, hvr-hang;
+                animation-duration: .3s, 1.5s;
+                animation-delay: 0s, .3s;
+                animation-timing-function: ease-out, ease-in-out;
+                animation-iteration-count: 1, infinite;
+                animation-fill-mode: forwards;
+                animation-direction: normal, alternate;
                 @media (max-width: 991px){
                     width: 346px;
                     height: 460px;
@@ -1661,14 +1712,41 @@ select{
                     width: 275px;
                 }
             }
+            @keyframes tada--simka {
+              from {
+                transform: scale3d(1, 1, 1) translateY(-100%) rotate(-9deg);
+              }
+
+              10%, 20% {
+                transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg) translateY(-100%);
+              }
+
+              30%, 50%, 70%, 90% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg) translateY(-100%);
+              }
+
+              40%, 60%, 80% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg) translateY(-100%);
+              }
+
+              to {
+                transform: scale3d(1, 1, 1) translateY(-100%) rotate(-9deg);
+              }
+            }
             &_text{
                 right: calc(50vw - 475px);
                 top: 50%;
                 transform: translateY(-100%) rotate(-9deg);
+                transform-origin: top;
                 text-shadow: -9px 8px 0 rgba(0, 26, 66, 0.2);
                 color: #ffa800;
                 font-size: 51px;
                 line-height: normal;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+                animation-name: tada--simka;
+                animation-iteration-count: infinite;
+
                 @media (max-width: 991px){
                     font-size: 40px;
                     right: calc(50vw - 325px);
@@ -1695,6 +1773,7 @@ select{
                     width: 339px;
                     height: 191px;
                     background-image: url(../img/sparks/monster_1.png);
+                    animation-duration: .7s;
                     @media (max-width: 991px){
                         width: 174px;
                         left: 14.3vw;
@@ -1707,11 +1786,20 @@ select{
                     width: 208px;
                     height: 230px;
                     background-image: url(../img/sparks/monster_2.png);
+                    animation-delay: .5s;
                     @media (max-width: 991px){
                         width: 150px;
                         bottom: 4vw;
                     }
                 }
+            }
+            @keyframes buzz--monster {
+              50% {
+                transform: translateX(3px) translateY(-140%) rotate(2deg);
+              }
+              100% {
+                transform: translateX(-3px) translateY(-140%) rotate(-2deg);
+              }
             }
             &_text{
                 right: 16vw;
@@ -1721,11 +1809,32 @@ select{
                 color: #00316e;
                 font-size: 43px;
                 line-height: normal;
+                animation-name: buzz--monster;
+                animation-duration: 0.15s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                transform-origin: bottom;
                 @media (max-width: 1229px){
+                    @keyframes buzz--monster {
+                      50% {
+                        transform: translateX(3px) translateY(-124%) rotate(2deg);
+                      }
+                      100% {
+                        transform: translateX(-3px) translateY(-124%) rotate(-2deg);
+                      }
+                    }
                     right: 8vw;
                     transform: translateY(-124%) rotate(-1deg);
                 }
                 @media (max-width: 991px){
+                    @keyframes buzz--monster {
+                      50% {
+                        transform: translateX(3px) translateY(-135%) rotate(2deg);
+                      }
+                      100% {
+                        transform: translateX(-3px) translateY(-135%) rotate(-2deg);
+                      }
+                    }
                     font-size: 26px;
                     right: 17vw;
                     transform: translateY(-135%) rotate(-1deg);
@@ -1755,6 +1864,7 @@ select{
                     width: 183px;
                     height: 118px;
                     background-image: url(../img/sparks/verta_1.png);
+                    animation-delay: .5s;
                     @media (max-width: 991px){
                         width: 130px;
                         left: 6vw;
@@ -1767,6 +1877,7 @@ select{
                     width: 211px;
                     height: 76px;
                     background-image: url(../img/sparks/verta_2.png);
+                    animation-duration: 2s;
                     @media (max-width: 991px){
                         width: 145px;
                         left: 23vw;
@@ -1778,6 +1889,7 @@ select{
                     width: 246px;
                     height: 145px;
                     background-image: url(../img/sparks/verta_3.png);
+                    animation-delay: .3s;
                     @media (max-width: 991px){
                         width: 140px;
                         right: 14.3vw;
@@ -1792,6 +1904,13 @@ select{
                 top: 50%;
                 transform: translate(-30%, -50%);
                 background-image: url(../img/verta.png);
+                animation-name: hvr-hang-sink, hvr-hang;
+                animation-duration: .5s, 2.5s;
+                animation-delay: 0s, .5s;
+                animation-timing-function: ease-out, ease-in-out;
+                animation-iteration-count: 1, infinite;
+                animation-fill-mode: forwards;
+                animation-direction: normal, alternate;
                 @media (max-width: 991px){
                     width: 302px;
                     height: 430px;
@@ -1801,6 +1920,19 @@ select{
                     transform: translate(-50%, -50%);
                 }
             }
+            @keyframes pulse-txt {
+              from {
+                transform: scale3d(1, 1, 1) translateY(-90%) rotate(-9deg);
+              }
+
+              50% {
+                transform: scale3d(1.05, 1.05, 1.05) translateY(-90%) rotate(-9deg);
+              }
+
+              to {
+                transform: scale3d(1, 1, 1) translateY(-90%) rotate(-9deg);
+              }
+            }
             &_text{
                 left: calc(50vw - 370px);
                 top: 50%;
@@ -1809,10 +1941,34 @@ select{
                 color: #baff00;
                 font-size: 51px;
                 line-height: 0.99;
+                animation-name: pulse-txt;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
                 @media (max-width: 991px){
+                    @keyframes pulse-txt {
+                      from {
+                        transform: scale3d(1, 1, 1) translateY(-55%) rotate(-9deg);
+                      }
+
+                      50% {
+                        transform: scale3d(1.05, 1.05, 1.05) translateY(-55%) rotate(-9deg);
+                      }
+
+                      to {
+                        transform: scale3d(1, 1, 1) translateY(-55%) rotate(-9deg);
+                      }
+                    }
                     font-size: 34px;
                     left: calc(50vw - 260px);
                     transform: translateY(-55%) rotate(-9deg);
+                }
+                @keyframes bounce-txt {
+                    60%, 75% {
+                        transform: scale(1) rotate(18deg);
+                    }
+                    0%, 100% {
+                        transform: scale(1.2) rotate(18deg);
+                    }
                 }
                 span{
                     font-size: 100px;
@@ -1821,6 +1977,10 @@ select{
                     text-shadow: -13px 12px 0 rgba(0,26,66,0.4);
                     margin-top: 32px;
                     margin-left: -149px;
+                    animation-name: bounce-txt;
+                    animation-duration: 2s;
+                    animation-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+                    animation-iteration-count: infinite;
                     @media (max-width: 991px){
                         font-size: 70px;
                         margin-top: 162px;
@@ -1830,10 +1990,24 @@ select{
             }
         }
     }
+    @keyframes flash-spark {
+      from, 50%, to {
+        opacity: 1;
+      }
+
+      25%, 60% {
+        opacity: 0;
+      }
+    }
+
     &_spark{
         position: absolute;
         background-repeat: no-repeat;
         background-size: contain;
+        animation-name: flash-spark;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
     }
     &_character{
         position: absolute;

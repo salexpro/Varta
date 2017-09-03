@@ -94,6 +94,14 @@ if($('.feedback').length){
 }
 
 if($('.register').length){
+
+    // Метод телефонв
+    $.validator.addMethod("phoneRU", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, '');
+        return this.optional(element) || phone_number.length > 9 && 
+        phone_number.match(/(\+7)([ .-]?)\(?([0-9]{3})\)?([ .-]?)([0-9]{3})([ .-]?)([0-9]{2})([ .-]?)([0-9]{2})/);
+    }, 'Пожалуйста, введите корректный номер');
+
     // Маски
     $('[name="phone"]').inputmask('+7 (999) 999-99-99', { 'placeholder': '_' });
     // $('[name="bdate"]').inputmask('99.99.9999', { 'placeholder': 'X' });
@@ -140,7 +148,10 @@ if($('.register').length){
         rules: {
             name: 'required',
             email: 'required',
-            phone: 'required',
+            phone: {
+                required: true,
+                phoneRU: true
+            },
             region: 'required',
             city: 'required',
             bday: 'required',
