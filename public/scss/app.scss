@@ -1999,6 +1999,9 @@ select{
         color: $color_deep_sapphire_approx;
         font-size: 30px;
         padding: 40px;
+        @media (max-width: 991px){
+            padding: 20px;
+        }
     }
     .fixi-button {
         width: 300px;
@@ -2029,20 +2032,33 @@ span.prize {
 }
 
 .modal{
-    &-lg{
-        width: 990px;
-    }
     &-dialog{
         margin: 60px auto;
     }
     &-header {
         border: none;
         padding: 15px 26px;
+        @media (max-width: 480px){
+            padding: 15px;
+            padding-bottom: 0;
+        }
         h4 {
             font-size: 32px;
             width: 100%;
             position: absolute;
             left: 0;
+            @media (max-width: 991px){
+                font-size: 26px;
+            }
+            @media (max-width: 480px){
+                padding: 0 30px;
+                position: static;
+            }
+        }
+    }
+    &-body{
+        @media (max-width: 480px){
+            padding-bottom: 0;
         }
     }
     &-content {
@@ -2081,10 +2097,16 @@ span.prize {
             border-color: $white;
             margin-bottom: 35px;
             color: $color_deep_sapphire_approx;
+            @media (max-width: 991px){
+                margin-bottom: 16px;
+            }
         }
         label {
             font-size: 30px;
             line-height: 1.1;
+            @media (max-width: 991px){
+                font-size: 26px;
+            }
         }
         a {
             color: $white;
@@ -2104,18 +2126,36 @@ span.prize {
         margin: auto;
         margin-top: 37px;
         font-size: 30px;
+        @media (max-width: 991px){
+            margin-top: 22px;
+            font-size: 26px;
+        }
+        @media (max-width: 480px){
+            width: 100%;
+            margin-top: 10px;
+        }
         &_footer{
             margin: 15px -33px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media (max-width: 991px){
+                margin: 10px -20px 0;
+            }
+            @media (max-width: 480px){
+                margin: 15px 0;
+                flex-direction: column;
+                text-align: center;
+            }
             label{
                 background-size: 40px auto;
                 padding-left: 57px;
                 padding-top: 23px;
                 height: 64px !important;
                 margin-top: -20px;
-
+                @media (max-width: 480px){
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -2123,14 +2163,46 @@ span.prize {
         span{
             font-size: 30px;
             margin-right: 15px;
+            @media (max-width: 991px){
+                font-size: 26px;
+            }
+            @media (max-width: 480px){
+                display: block;
+            }
         }
         a{
             margin-left: 25px;
+            @media (max-width: 991px){
+                margin-left: 20px;
+            }
+            @media (max-width: 991px){
+                img{
+                    width: 60px;
+                }
+            }
+            @media (max-width: 480px){
+                &:first-of-type{
+                    margin: 0;
+                }
+            }
         }
     }
     &-footer {
         border: none;
         padding-bottom: 38px;
+        .fixi-button{
+            @media (max-width: 991px){
+                transform: scale(0.7) translate(-50%) !important;
+                margin-top: -10px;
+                margin-bottom: -10px;
+                &::before{
+                    box-shadow: 14px -5px 0px -7px #fff;
+                }
+                span{
+                    box-shadow: -5px -2px 0 #fff, 11px -3px 0 -6px #fff;
+                }
+            }
+        }
     }
     .close {
         position: relative;
@@ -2140,5 +2212,8 @@ span.prize {
         opacity: 1;
         text-shadow: none;
         margin-top: -6px;
+        @media (max-width: 991px){
+            font-size: 45px;
+        }
     }
 }
