@@ -8,7 +8,8 @@ if($(window).width() >= 1230){
                 box: '150p'
             }
         });
-    }
+    };
+    $(window).resize();
 }
 
 // Шапка
@@ -41,7 +42,7 @@ if($('.owl-carousel').length){
         nav: false,
         loop: true,
         items: 1,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: false
     })
@@ -94,14 +95,48 @@ if($('.feedback').length){
 }
 
 if($('.register').length){
+    // Маски
     $('[name="phone"]').inputmask('+7 (999) 999-99-99', { 'placeholder': '_' });
-    $('[name="bdate"]').inputmask('99.99.9999', { 'placeholder': 'X' });
+    // $('[name="bdate"]').inputmask('99.99.9999', { 'placeholder': 'X' });
+
+    // Календарь
+    $.extend($.fn.pickadate.defaults, {
+        firstDay: 1,
+        format: 'dd.mm.yyyy',
+        today: '',
+        clear: 'Очистить',
+        close: 'Закрыть',
+        monthsFull: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthsShort: ['Янв', 'Фев', 'Март', 'Апр', 'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        weekdaysFull: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+        weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    });
+
+    var today = new Date();
+    today.setDate(today.getDate() - (365 * 18 + 5)); 
+
+    $('[name="bdate"]').pickadate({
+        selectYears: 82,
+        max: today
+    });
+
     $('.register').validate({
         errorPlacement: function(error, element) {
-            $(element).addClass('error')
+            if($(element).attr('type')!='checkbox'){
+                $(element).addClass('error');
+            } else {
+                $(element).next().addClass('animated shake');
+                setTimeout(function(){
+                    $(element).next().removeClass('animated shake');
+                }, 1200);
+            }
         },
         success: function(label, element) {
-            $(element).removeClass('error')
+            if($(element).attr('type')!='checkbox'){
+                $(element).removeClass('error');
+            } else {
+                $(element).next().removeClass('animated shake');
+            }
         },
         rules: {
             name: 'required',
@@ -110,7 +145,7 @@ if($('.register').length){
             region: 'required',
             city: 'required',
             bday: 'required',
-            read_feedback: 'required'
+            rules: 'required'
         },
         submitHandler: function(form) {
             location.href='./profile.html';
@@ -147,6 +182,9 @@ $('#forgot form').validate({
         email: 'required'
     },
     submitHandler: function(form) {
+        alert('sd')
         return false;
     }
 });
+
+$('[data-toggle="tooltip"]').tooltip()

@@ -2,7 +2,7 @@
 $color_chambray_approx: #284292;
 $color_deep_cove_approx: #030c3e;
 $primary-color: #eebd1c;
-$primary-darken: darken($primary-color, 10%);
+$primary-darken: #EDA405;
 $white: #fff;
 $color_deep_sapphire_approx: #234291;
 $color_energy_yellow_approx: #fce359;
@@ -100,7 +100,7 @@ input, select, textarea {
     outline: none;
     transition: 300ms;
     &.error{
-        border-color: red !important;
+        border-color: red;
     }
 }
 
@@ -388,7 +388,7 @@ input, select, textarea {
         display: block;
         margin: auto;
         margin-top: 150px;
-        animation: mover 2s infinite alternate;
+        animation: mover 3s infinite alternate;
         max-width: 100%;
         @media (max-width: 991px){
             margin-top: 17vw;
@@ -1007,9 +1007,13 @@ input, select, textarea {
         color: $white;
         padding: 5px 35px 6px;
         font-size: 30px;
+        transition: 300ms;
         @media (max-width: 991px){
             padding: 5px 30px 5px;
             font-size: 24px;
+        }
+        &:hover{
+            background-color: $primary-darken;
         }
         &:first-of-type{
             @media (max-width: 480px){
@@ -1181,12 +1185,15 @@ select{
     background-position: right center;
     border-right: 47px solid transparent;
     box-shadow: inset 0 0 0 50px $white;
+    border-right-color: transparent !important;
 }
 
 [type="radio"], [type="checkbox"] {
     position: absolute;
     visibility: hidden;
     z-index: -1;
+    width: 0 !important;
+    height: 0;
     &:checked {
         + label {
             background-image: $url_14;
@@ -1294,6 +1301,7 @@ select{
     label {
         font-size: 30px;
         color: $primary-color;
+        font-weight: 400;
         @media (max-width: 991px){
             font-size: 23px;
         }
@@ -1378,9 +1386,6 @@ select{
         @media (max-width: 480px){
             font-size: 38px;
         }
-    }
-    label{
-        margin-left: 18px;
     }
     input {
         width: 100%;
@@ -1468,7 +1473,7 @@ select{
             }
         }
     }
-    select {
+    select:not(.picker__select--year) {
         width: 100%;
         margin-bottom: 15px;
         color: $black_42;
@@ -1479,7 +1484,9 @@ select{
         }
     }
     label {
+        margin-left: 18px;
         font-size: 30px;
+        font-weight: 400;
         @media (max-width: 991px){
             font-size: 23px;
         }
@@ -2212,6 +2219,9 @@ span.prize {
             @media (max-width: 991px){
                 margin-bottom: 16px;
             }
+            &.error{
+                border-color: red;
+            }
         }
         label {
             font-size: 30px;
@@ -2329,5 +2339,27 @@ span.prize {
         @media (max-width: 991px){
             font-size: 45px;
         }
+    }
+}
+
+[data-toggle="tooltip"]{
+    cursor: help;
+}
+
+.picker{
+    width: calc(100% - 30px);
+    &__select--year{
+        margin: 0;
+        padding: 0 5px;
+        min-height: auto;
+        height: 30px;
+        font-size: 20px;
+    }
+    &__holder{
+        outline: none;
+        right: 0;
+    }
+    &__select--year{
+        margin: 0;
     }
 }

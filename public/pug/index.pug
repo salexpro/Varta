@@ -142,11 +142,11 @@ html(lang='ru')
                             li.question Механическая система, согласно третьему закону Ньютона, опасна?
                             li.answer
                                 | Кинематическое уравнение Эйлера даёт большую проекцию на оси, чем нестационарный подвижный объект. Проекция на подвижные оси, в первом приближении, различна.
-        .parallax.parallax--verta(data-bottom-top='background-position-y: 0%;', data-top-bottom='background-position-y: 30%;')
+        .parallax.parallax--verta(data-bottom-top='background-position-y: 0%;', data-top-bottom='background-position-y: 70%;')
             .parallax_spark
             .parallax_spark
             .parallax_spark
-            .parallax_character(data-bottom-top='transform: translate(-50%, -30%)', data-top-bottom='transform: translate(-50%,-50%)')
+            .parallax_character(data-bottom-top='transform: translate(-50%, -20%)' data-top-bottom='transform: translate(-50%,-50%)')
             .parallax_text
                 | фиксики
                 br
@@ -318,11 +318,11 @@ html(lang='ru')
                 .col-md-4.col-xs-6.advice.register_input
                     label.bebasneue-reg(for='email_register') Email:
                     input#email_register.bebasneue-reg(type='email' name="email" placeholder='Укажите email')
-                    img(src='img/advice.png', alt='')
+                    img(src='img/advice.png' alt='' data-toggle="tooltip" data-placement="left" title="Подсказка")
                 .col-md-4.col-xs-6.advice.register_input
                     label.bebasneue-reg(for='phone_register') Телефон:
                     input#phone_register.bebasneue-reg(type='tel' name="phone" placeholder='+7 (___) ___-__-__')
-                    img(src='img/advice.png', alt='')
+                    img(src='img/advice.png' alt='' data-toggle="tooltip" data-placement="left" title="Подсказка")
                 .col-md-4.col-xs-6.register_input
                     label.bebasneue-reg(for='region_register') Регион:
                     select#region_register.bebasneue-reg(name="region")
@@ -353,7 +353,7 @@ html(lang='ru')
                     |  Все поля обязательны для заполнения
             .row.space-above
                 .col-md-4.register_check
-                    input#read1(type='checkbox', name='read_feedback', value='1')
+                    input#read1(type='checkbox', name='rules', value='1')
                     label.bebasneue-reg(for='read1')
                         span
                             | Я прочитал и согласен с 
@@ -364,7 +364,7 @@ html(lang='ru')
                                 | пользовательским соглашением
                             | .
                 .col-md-8.register_check
-                    input#read2(type='checkbox', name='read_feedback', value='1')
+                    input#read2(type='checkbox', name='info', value='1')
                     label.bebasneue-reg(for='read2')
                         | Я согласен получать информацию по SMS и Email.
                 button.fixi-reg.fixi-button(type="submit")
