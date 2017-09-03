@@ -282,7 +282,7 @@
         </div>
       </div>
     </div>
-    <div class="container feedback" id="feedback">
+    <form class="container feedback" id="feedback" action="">
       <div class="row">
         <div class="col-md-12 text-center fixi-reg">
           <h4>Обратная Связь</h4>
@@ -293,11 +293,11 @@
           <div class="feedback_form_top">
             <div>
               <label class="bebasneue-reg" for="name_feedback">Имя:</label>
-              <input class="bebasneue-reg" id="name_feedback" type="text" placeholder="Укажите имя">
+              <input class="bebasneue-reg" id="name_feedback" type="text" name="name" placeholder="Укажите имя">
             </div>
             <div>
               <label class="bebasneue-reg" for="email_feedback">Email:</label>
-              <input class="bebasneue-reg" id="email_feedback" type="email" placeholder="Укажите email">
+              <input class="bebasneue-reg" id="email_feedback" type="email" name="email" placeholder="Укажите email">
             </div>
           </div>
           <div class="feedback_form_bottom">
@@ -306,16 +306,16 @@
         </div>
         <div class="col-md-8 col-xs-12">
           <label class="bebasneue-reg" for="thread_feedback">Тема:</label>
-          <input class="bebasneue-reg" id="thread_feedback" type="text" placeholder="Укажите тему">
-          <textarea class="bebasneue-reg" placeholder="Сообщение"></textarea>
+          <input class="bebasneue-reg" id="thread_feedback" type="text" name="thread" placeholder="Укажите тему">
+          <textarea class="bebasneue-reg" placeholder="Сообщение" name="message"></textarea>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 col-md-offset-0 col-sm-6 col-sm-offset-6 col-xs-12 col-xs-offset-0 text-center">
-          <button class="fixi-reg" type="button">отправить</button>
+          <button class="fixi-reg" type="submit">отправить</button>
         </div>
       </div>
-    </div>
+    </form>
     <div class="container map" id="map">
       <div class="row">
         <div class="col-md-12 text-center fixi-reg">
@@ -324,7 +324,7 @@
       </div>
       <div class="map_container"></div>
     </div>
-    <div class="container register" id="register">
+    <form class="container register" id="register" action="">
       <div class="row">
         <div class="col-md-12 text-center fixi-reg">
           <h4>региСтрация</h4>
@@ -350,37 +350,35 @@
       <div class="row space-above">
         <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="name_register">Имя:</label>
-          <input class="bebasneue-reg" id="name_register" type="text" placeholder="Укажите имя">
+          <input class="bebasneue-reg" id="name_register" type="text" name="name" placeholder="Укажите имя">
         </div>
         <div class="col-md-4 col-xs-6 advice register_input">
           <label class="bebasneue-reg" for="email_register">Email:</label>
-          <input class="bebasneue-reg" id="email_register" type="email" placeholder="Укажите email"><img src="img/advice.png" alt="">
+          <input class="bebasneue-reg" id="email_register" type="email" name="email" placeholder="Укажите email"><img src="img/advice.png" alt="">
         </div>
         <div class="col-md-4 col-xs-6 advice register_input">
-          <label class="bebasneue-reg" for="phone_register">Телефон (логин):</label>
-          <input class="bebasneue-reg" id="phone_register" type="tel" placeholder="+7 (___) ___-__-__"><img src="img/advice.png" alt="">
+          <label class="bebasneue-reg" for="phone_register">Телефон:</label>
+          <input class="bebasneue-reg" id="phone_register" type="tel" name="phone" placeholder="+7 (___) ___-__-__"><img src="img/advice.png" alt="">
         </div>
         <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="region_register">Регион:</label>
-          <select class="bebasneue-reg" id="region_register">
+          <select class="bebasneue-reg" id="region_register" name="region">
             <option value="">Укажите регион</option>
-            <option value="">Регион</option>
-            <option value="">Регион</option>
+            <option value="1">Регион</option>
+            <option value="2">Регион</option>
           </select>
         </div>
         <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="city_register">Город/Район:</label>
-          <select class="bebasneue-reg" id="city_register">
+          <select class="bebasneue-reg" id="city_register" name="city">
             <option value="">Укажите город</option>
-            <option value="">город</option>
-            <option value="">город</option>
+            <option value="1">город</option>
+            <option value="2">город</option>
           </select>
         </div>
         <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="bdate_register">Дата рождения:</label>
-          <select class="bebasneue-reg" id="bdate_register">
-            <option value="">Укажите дату рождения</option>
-          </select>
+          <input class="bebasneue-reg" id="bdate_register" type="text" name="bdate" placeholder="XX.XX.XXXX">
         </div>
       </div>
       <div class="row space-above">
@@ -402,14 +400,15 @@
       <div class="row space-above">
         <div class="col-md-4 register_check">
           <input id="read1" type="checkbox" name="read_feedback" value="1">
-          <label class="bebasneue-reg" for="read1"><span>Я прочитал и согласен с <a href="#">правилами акции и пользовательским соглашением</a>.</span></label>
+          <label class="bebasneue-reg" for="read1"><span>Я прочитал и согласен с <a href="#" target="_blank">правилами акции</a> и <a href="#" target="_blank">пользовательским соглашением</a>.</span></label>
         </div>
         <div class="col-md-8 register_check">
           <input id="read2" type="checkbox" name="read_feedback" value="1">
           <label class="bebasneue-reg" for="read2">Я согласен получать информацию по SMS и Email.</label>
-        </div><a class="fixi-reg fixi-button" href="#"><span>зарегистрироваться</span></a>
+        </div>
+        <button class="fixi-reg fixi-button" type="submit"><span>зарегистрироваться</span></button>
       </div>
-    </div><img id="scroll" data-top="top:20%" data-bottom="top:40%" data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" src="img/scroll.png" alt="">
+    </form><img id="scroll" data-top="top:20%" data-bottom="top:40%" data-200-end="top:70%;opacity: 1.0" data-end="top:80%; opacity: 0.0" src="img/scroll.png" alt="">
     <div class="modal fade bs-example-modal-lg" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg" role="document">
         <form action="profile.html">
@@ -424,9 +423,9 @@
               </div>
               <div class="modal_form">
                 <label class="bebasneue-reg" for="auth_email">Email:</label>
-                <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+                <input class="bebasneue-reg" id="auth_email" type="email" name="email" placeholder="Укажите Email">
                 <label class="bebasneue-reg" for="auth_password">Пароль:</label>
-                <input class="bebasneue-reg" id="auth_password" type="password" placeholder="******">
+                <input class="bebasneue-reg" id="auth_password" type="password" name="password" placeholder="******">
                 <div class="modal_form_footer">
                   <div><a class="bebasneue-reg" data-dismiss="modal" data-toggle="modal" data-target="#forgot" href="#">Забыли пароль?</a> <a class="bebasneue-reg" data-dismiss="modal" href="#register">Зарегистрироваться</a></div>
                   <input class="white" id="remember_me" type="checkbox">
@@ -449,17 +448,19 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span class="fixi-reg" aria-hidden="true">x</span></button>
             <h4 class="modal-title fixi-reg">восстановление пароля</h4>
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4">
-                <label class="bebasneue-reg" for="auth_email">Email:</label>
-                <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+          <form action="">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                  <label class="bebasneue-reg" for="auth_email">Email:</label>
+                  <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button class="fixi-button white"><span>отправить пароль</span></button>
-          </div>
+            <div class="modal-footer">
+              <button class="fixi-button white" type="submit"><span>отправить пароль</span></button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -467,7 +468,7 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="fixi-reg" aria-hidden="true">x</span></button>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span class="fixi-reg" aria-hidden="true">x</span></button>
             <h4 class="modal-title fixi-reg">ураа!</h4>
           </div>
           <div class="modal-body">
@@ -475,9 +476,7 @@
               <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg">Поздравляем!<br> Вы выиграли гироскутер.<br>Для получения приза необходимо дозаполнить<br>данные в личном кабинете.</div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="fixi-button white" type="submit"><span>дрыц-тыц!</span></button>
-          </div>
+          <div class="modal-footer"><a class="fixi-button white" href="./profile"><span>дрыц-тыц!</span></a></div>
         </div>
       </div>
     </div>
@@ -506,6 +505,8 @@
     <script src="vendor/skrollr/dist/skrollr.min.js"></script>
     <script src="vendor/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
     <script src="https://api-maps.yandex.ru/1.1/index.xml"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

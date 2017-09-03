@@ -1,13 +1,15 @@
-// if($('#scroll').length){
-//     var s = skrollr.init({
-//         forceHeight: false,
-//         constants: {
-//             //fill the box for a "duration" of 150% of the viewport (pause for 150%)
-//             //adjust for shorter/longer pause
-//             box: '150p'
-//         }
-//     });
-// }
+if($(window).width() >= 1230){
+    if($('#scroll').length){
+        var s = skrollr.init({
+            forceHeight: false,
+            constants: {
+                //fill the box for a "duration" of 150% of the viewport (pause for 150%)
+                //adjust for shorter/longer pause
+                box: '150p'
+            }
+        });
+    }
+}
 
 // Шапка
 $(window).scroll(function(){
@@ -54,3 +56,97 @@ if($('.map_container').length){
         map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
     })
 }
+
+// Валидаци форм
+$.validator.addMethod("email", function(email, element) {
+    return this.optional(element) || email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+}, 'Пожалуйста, введите корректный email');
+
+$('[name="name"]').inputmask({
+    mask: '[a{*}]',
+    placeholder: '',
+    definitions: {
+        'a': {
+            validator: '[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя]',
+            cardinality: 1,
+        }
+    }
+});
+
+if($('.feedback').length){
+    $('.feedback').validate({
+        errorPlacement: function(error, element) {
+            $(element).addClass('error')
+        },
+        success: function(label, element) {
+            $(element).removeClass('error')
+        },
+        rules: {
+            name: 'required',
+            email: 'required',
+            thread: 'required',
+            message: 'required'
+        },
+        submitHandler: function(form) {
+            return false;
+        }
+    });
+}
+
+if($('.register').length){
+    $('[name="phone"]').inputmask('+7 (999) 999-99-99', { 'placeholder': '_' });
+    $('[name="bdate"]').inputmask('99.99.9999', { 'placeholder': 'X' });
+    $('.register').validate({
+        errorPlacement: function(error, element) {
+            $(element).addClass('error')
+        },
+        success: function(label, element) {
+            $(element).removeClass('error')
+        },
+        rules: {
+            name: 'required',
+            email: 'required',
+            phone: 'required',
+            region: 'required',
+            city: 'required',
+            bday: 'required',
+            read_feedback: 'required'
+        },
+        submitHandler: function(form) {
+            location.href='./profile.html';
+            return false;
+        }
+    });
+}
+
+$('#login form').validate({
+    errorPlacement: function(error, element) {
+        $(element).addClass('error')
+    },
+    success: function(label, element) {
+        $(element).removeClass('error')
+    },
+    rules: {
+        email: 'required',
+        password: 'required'
+    },
+    submitHandler: function(form) {
+        location.href='./profile.html';
+        return false;
+    }
+});
+
+$('#forgot form').validate({
+    errorPlacement: function(error, element) {
+        $(element).addClass('error')
+    },
+    success: function(label, element) {
+        $(element).removeClass('error')
+    },
+    rules: {
+        email: 'required'
+    },
+    submitHandler: function(form) {
+        return false;
+    }
+});

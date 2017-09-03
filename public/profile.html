@@ -170,9 +170,9 @@
               </div>
               <div class="modal_form">
                 <label class="bebasneue-reg" for="auth_email">Email:</label>
-                <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+                <input class="bebasneue-reg" id="auth_email" type="email" name="email" placeholder="Укажите Email">
                 <label class="bebasneue-reg" for="auth_password">Пароль:</label>
-                <input class="bebasneue-reg" id="auth_password" type="password" placeholder="******">
+                <input class="bebasneue-reg" id="auth_password" type="password" name="password" placeholder="******">
                 <div class="modal_form_footer">
                   <div><a class="bebasneue-reg" data-dismiss="modal" data-toggle="modal" data-target="#forgot" href="#">Забыли пароль?</a> <a class="bebasneue-reg" data-dismiss="modal" href="#register">Зарегистрироваться</a></div>
                   <input class="white" id="remember_me" type="checkbox">
@@ -195,17 +195,19 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span class="fixi-reg" aria-hidden="true">x</span></button>
             <h4 class="modal-title fixi-reg">восстановление пароля</h4>
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4">
-                <label class="bebasneue-reg" for="auth_email">Email:</label>
-                <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+          <form action="">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                  <label class="bebasneue-reg" for="auth_email">Email:</label>
+                  <input class="bebasneue-reg" id="auth_email" type="email" placeholder="Укажите Email">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button class="fixi-button white"><span>отправить пароль</span></button>
-          </div>
+            <div class="modal-footer">
+              <button class="fixi-button white" type="submit"><span>отправить пароль</span></button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -213,7 +215,7 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="fixi-reg" aria-hidden="true">x</span></button>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><span class="fixi-reg" aria-hidden="true">x</span></button>
             <h4 class="modal-title fixi-reg">ураа!</h4>
           </div>
           <div class="modal-body">
@@ -221,9 +223,7 @@
               <div class="col-md-8 col-md-offset-2 text-center bebasneue-reg">Поздравляем!<br> Вы выиграли гироскутер.<br>Для получения приза необходимо дозаполнить<br>данные в личном кабинете.</div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="fixi-button white" type="submit"><span>дрыц-тыц!</span></button>
-          </div>
+          <div class="modal-footer"><a class="fixi-button white" href="./profile"><span>дрыц-тыц!</span></a></div>
         </div>
       </div>
     </div>
@@ -249,6 +249,8 @@
     </div>
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>
