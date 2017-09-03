@@ -9,7 +9,6 @@ if($(window).width() >= 1230){
             }
         });
     };
-    $(window).resize();
 }
 
 // Шапка
