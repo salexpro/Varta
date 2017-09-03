@@ -1,23 +1,25 @@
 .header
     .container
         a.logo(href="/")
+        .hamb
+            .hamb_inner
         #navbar.bebasneue-reg
             ul.nav.navbar-nav
                 li
-                    a(href='#prizes') Правила и призы
+                    a(href=(page=='main')?'#prizes':'/#prizes') Правила и призы
                 li
                     if page=='main'
                         a(href='#register') Регистрация
                     else
-                        a(href='#') Профиль
+                        a(href='./profile.html') Профиль
                 li
-                    a(href='#winners') Победители
+                    a(href=(page=='main')?'#winners':'/#winners') Победители
                 li
-                    a(href='#feedback') Обратная связь
+                    a(href=(page=='main')?'#feedback':'/#feedback') Обратная связь
                 li
-                    a(href='#faq') FAQ
+                    a(href=(page=='main')?'#faq':'/#faq') FAQ
                 li
-                    a(href='#map') Где купить
+                    a(href=(page=='main')?'#map':'/#map') Где купить
                 li
                     if page=='main'
                         a(href="#" data-toggle="modal" data-target="#login") Вход

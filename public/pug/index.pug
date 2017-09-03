@@ -21,6 +21,7 @@ html(lang='ru')
                         img(src='img/scooter_center.png', alt='')
                     .welcome_mechanics
                         img(src='img/mechanics.png', alt='')
+                        img(src='img/mechanics_mobile.png', alt='')
                 a.fixi-button(href='#' data-toggle="modal" data-target="#login")
                     span
                         | зарегистрировать код
@@ -166,74 +167,75 @@ html(lang='ru')
                             button.fixi-reg(type='button') х
                 .row
                     .col-md-12
-                        table.table.bebasneue-reg.borderless
-                            thead
-                                tr
-                                    th Дата
-                                    th Email
-                                    th Победитель
-                                    th Приз
-                            tbody
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
-                                tr
-                                    td Дата
-                                    td Email
-                                    td Победитель
-                                    td Приз
-                                tr.highlight
-                                    td
-                                    td
-                                    td
-                                    td
+                        .winners_table
+                            table.table.bebasneue-reg.borderless
+                                thead
+                                    tr
+                                        th Дата
+                                        th Email
+                                        th Победитель
+                                        th Приз
+                                tbody
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        td Дата
+                                        td Email
+                                        td Победитель
+                                        td Приз
+                                    tr.highlight
+                                        td
+                                        td
+                                        td
+                                        td
                 .winners_pager
                     ul
                         li.active
@@ -264,21 +266,23 @@ html(lang='ru')
                 .col-md-12.text-center.fixi-reg
                     h4 Обратная Связь
             .row.feedback_form
-                .col-md-4.feedback_form_left
+                .col-md-4.col-xs-12.feedback_form_left
                     .feedback_form_top
-                        label.bebasneue-reg(for='name_feedback') Имя:
-                        input#name_feedback.bebasneue-reg(type='text', placeholder='Укажите имя')
-                        label.bebasneue-reg(for='email_feedback') Email:
-                        input#email_feedback.bebasneue-reg(type='email', placeholder='Укажите email')
-                    .feedbackv_form_bottom
+                        div
+                            label.bebasneue-reg(for='name_feedback') Имя:
+                            input#name_feedback.bebasneue-reg(type='text', placeholder='Укажите имя')
+                        div
+                            label.bebasneue-reg(for='email_feedback') Email:
+                            input#email_feedback.bebasneue-reg(type='email', placeholder='Укажите email')
+                    .feedback_form_bottom
                         label.bebasneue-reg(for='sec_code') Введите символы с картинки:
                         img(src="//placehold.it/380x100?text=Google reCaptcha", alt="")
-                .col-md-8
+                .col-md-8.col-xs-12
                     label.bebasneue-reg(for='thread_feedback') Тема:
                     input#thread_feedback.bebasneue-reg(type='text', placeholder='Укажите тему')
                     textarea.bebasneue-reg(placeholder='Сообщение')
             .row
-                .col-md-12.text-center
+                .col-md-12.col-md-offset-0.col-sm-6.col-sm-offset-6.col-xs-12.col-xs-offset-0.text-center
                     button.fixi-reg(type='button') отправить
 
         #map.container.map
@@ -293,7 +297,7 @@ html(lang='ru')
                     h4 региСтрация
             .row.social
                 .col-md-12.text-center.bebasneue-reg
-                    | Зарегистрироваться через:
+                    div Зарегистрироваться через:
                     a(href='#')
                         svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 70.53 78.3')
                             polygon.cls-1(points='32.55 0 67.81 17.22 70.53 56.37 37.99 78.31 2.72 61.08 0 21.93 32.55 0')
@@ -308,30 +312,30 @@ html(lang='ru')
                             path.cls-2(d='M36,23.26a4.59,4.59,0,1,1-4.59,4.6A4.6,4.6,0,0,1,36,23.26ZM36,39h0a11.1,11.1,0,1,0-11.1-11.1A11.11,11.11,0,0,0,36,39ZM40.52,48l6.2,6.21h0a3.25,3.25,0,0,1,0,4.59h0a3.25,3.25,0,0,1-4.59,0L36,52.71l-6.1,6.1a3.25,3.25,0,1,1-4.6-4.6L31.54,48a20.81,20.81,0,0,1-6.44-2.67,3.25,3.25,0,0,1-1-4.48h0a3.25,3.25,0,0,1,4.48-1,14.1,14.1,0,0,0,14.94,0h0A3.25,3.25,0,0,1,47,45.34,20.78,20.78,0,0,1,40.52,48Z')
 
             .row.space-above
-                .col-md-4.register_input
+                .col-md-4.col-xs-6.register_input
                     label.bebasneue-reg(for='name_register') Имя:
                     input#name_register.bebasneue-reg(type='text', placeholder='Укажите имя')
-                .col-md-4.advice.register_input
+                .col-md-4.col-xs-6.advice.register_input
                     label.bebasneue-reg(for='email_register') Email:
                     input#email_register.bebasneue-reg(type='email', placeholder='Укажите email')
                     img(src='img/advice.png', alt='')
-                .col-md-4.advice.register_input
+                .col-md-4.col-xs-6.advice.register_input
                     label.bebasneue-reg(for='phone_register') Телефон (логин):
                     input#phone_register.bebasneue-reg(type='tel', placeholder='+7 (___) ___-__-__')
                     img(src='img/advice.png', alt='')
-                .col-md-4.register_input
+                .col-md-4.col-xs-6.register_input
                     label.bebasneue-reg(for='region_register') Регион:
                     select#region_register.bebasneue-reg
                         option(value='') Укажите регион
                         option(value='') Регион
                         option(value='') Регион
-                .col-md-4.register_input
+                .col-md-4.col-xs-6.register_input
                     label.bebasneue-reg(for='city_register') Город/Район:
                     select#city_register.bebasneue-reg
                         option(value='') Укажите город
                         option(value='') город
                         option(value='') город
-                .col-md-4.register_input
+                .col-md-4.col-xs-6.register_input
                     label.bebasneue-reg(for='bdate_register') Дата рождения:
                     select#bdate_register.bebasneue-reg
                         option(value='') Укажите дату рождения
@@ -345,7 +349,7 @@ html(lang='ru')
                     input#female(type='radio', name='sex_feedback', value='2')
                     label.bebasneue-reg(for='female') Женский
             .row
-                .col-md-12.text-left.bebasneue-reg.register_note
+                .col-md-6.text-left.bebasneue-reg.register_note
                     sup *
                     |  Все поля обязательны для заполнения
             .row.space-above

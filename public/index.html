@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Varta</title>
   <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -10,6 +10,9 @@
   <body data-spy="scroll" data-target="#navbar">
     <div class="header">
       <div class="container"><a class="logo" href="/"></a>
+        <div class="hamb">
+          <div class="hamb_inner"></div>
+        </div>
         <div class="bebasneue-reg" id="navbar">
           <ul class="nav navbar-nav">
             <li><a href="#prizes">Правила и призы</a></li>
@@ -38,7 +41,7 @@
               <div style="font-size: 65px;">гироскутер!</div>
             </div><img src="img/scooter_center.png" alt="">
           </div>
-          <div class="welcome_mechanics"><img src="img/mechanics.png" alt=""></div>
+          <div class="welcome_mechanics"><img src="img/mechanics.png" alt=""><img src="img/mechanics_mobile.png" alt=""></div>
         </div><a class="fixi-button" href="#" data-toggle="modal" data-target="#login"><span>зарегистрировать код</span></a>
         <div class="welcome_text akrobat-reg">Организатор акции — ООО «СОВА». Стимулирующее мероприятие в виде рекламной акции «Собери всех Фиксиков и получи гироскутер в подарок» действует на территории РФ. Не является лотереей. Общий период проведения стимулирующего мероприятия: с 04.09.2017 по 31.12.2017, включая период выдачи призов победителям. Регистрация промо-кодов осуществляется в период с 00 часов 00 минут 01 секунд 4 сентября 2017 года по 23 часа 59 минут 59 секунд 14 декабря 2017 года по московскому времени на сайте http://www.varta-consumer.ru. Обязательным условием участия в розыгрыше и получения главного приза (гироскутер) является вступление в сообщество Varta Consumer Russia в одной из 3-х социальных сетей и предъявление чека после розыгрыша. Подробные правила проведения, информация об организаторе, количестве призов, сроках, месте и порядке их вручения размещены на сайте: http://www.varta-consumer.ru.<br>Количество призов ограничено. Призы могут отличаться от изображенных.</div>
       </div>
@@ -174,90 +177,92 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table class="table bebasneue-reg borderless">
-              <thead>
-                <tr>
-                  <th>Дата</th>
-                  <th>Email</th>
-                  <th>Победитель</th>
-                  <th>Приз</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Дата</td>
-                  <td>Email</td>
-                  <td>Победитель</td>
-                  <td>Приз</td>
-                </tr>
-                <tr class="highlight">
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="winners_table">
+              <table class="table bebasneue-reg borderless">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Email</th>
+                    <th>Победитель</th>
+                    <th>Приз</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Дата</td>
+                    <td>Email</td>
+                    <td>Победитель</td>
+                    <td>Приз</td>
+                  </tr>
+                  <tr class="highlight">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <div class="winners_pager">
@@ -284,25 +289,29 @@
         </div>
       </div>
       <div class="row feedback_form">
-        <div class="col-md-4 feedback_form_left">
+        <div class="col-md-4 col-xs-12 feedback_form_left">
           <div class="feedback_form_top">
-            <label class="bebasneue-reg" for="name_feedback">Имя:</label>
-            <input class="bebasneue-reg" id="name_feedback" type="text" placeholder="Укажите имя">
-            <label class="bebasneue-reg" for="email_feedback">Email:</label>
-            <input class="bebasneue-reg" id="email_feedback" type="email" placeholder="Укажите email">
+            <div>
+              <label class="bebasneue-reg" for="name_feedback">Имя:</label>
+              <input class="bebasneue-reg" id="name_feedback" type="text" placeholder="Укажите имя">
+            </div>
+            <div>
+              <label class="bebasneue-reg" for="email_feedback">Email:</label>
+              <input class="bebasneue-reg" id="email_feedback" type="email" placeholder="Укажите email">
+            </div>
           </div>
-          <div class="feedbackv_form_bottom">
+          <div class="feedback_form_bottom">
             <label class="bebasneue-reg" for="sec_code">Введите символы с картинки:</label><img src="//placehold.it/380x100?text=Google reCaptcha" alt="">
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-xs-12">
           <label class="bebasneue-reg" for="thread_feedback">Тема:</label>
           <input class="bebasneue-reg" id="thread_feedback" type="text" placeholder="Укажите тему">
           <textarea class="bebasneue-reg" placeholder="Сообщение"></textarea>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 col-md-offset-0 col-sm-6 col-sm-offset-6 col-xs-12 col-xs-offset-0 text-center">
           <button class="fixi-reg" type="button">отправить</button>
         </div>
       </div>
@@ -322,7 +331,8 @@
         </div>
       </div>
       <div class="row social">
-        <div class="col-md-12 text-center bebasneue-reg">Зарегистрироваться через:<a href="#">
+        <div class="col-md-12 text-center bebasneue-reg">
+          <div>Зарегистрироваться через:</div><a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70.53 78.3">
               <polygon class="cls-1" points="32.55 0 67.81 17.22 70.53 56.37 37.99 78.31 2.72 61.08 0 21.93 32.55 0"></polygon>
               <path class="cls-2" d="M49.76,39.74s6.14-8.66,6.75-11.5c.2-1-.24-1.59-1.3-1.59H49.88a1.94,1.94,0,0,0-2,1.3,48.21,48.21,0,0,1-6.38,10c-1.12,1.25-1.7,1.63-2.32,1.63s-.73-.42-.73-1.54V28.16c0-1.38-.16-1.79-1.3-1.79H28.58a.93.93,0,0,0-1.06.89c0,1.3,2,1.59,2,5.12v7.27c0,1.46-.08,2-.77,2-1.83,0-6.18-6.3-8.62-13.45-.49-1.46-1-1.87-2.4-1.87H12.41a1.27,1.27,0,0,0-1.34,1.3c0,1.42,1.67,8,8.21,16.82,4.39,5.93,10.16,9.14,15.36,9.14,3.17,0,3.94-.53,3.94-1.87V47.22c0-1.14.45-1.63,1.1-1.63s2,.24,5,3.21c3.58,3.41,3.82,4.84,5.77,4.84h6c.61,0,1.18-.28,1.18-1.3,0-1.34-1.75-3.74-4.43-6.58-1.1-1.46-2.89-3-3.45-3.78C48.94,41.12,49.19,40.63,49.76,39.74Z"></path>
@@ -334,22 +344,23 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 70.53 78.3">
               <polygon class="cls-1" points="32.55 0 67.81 17.22 70.53 56.37 37.99 78.31 2.72 61.08 0 21.93 32.55 0"></polygon>
               <path class="cls-2" d="M36,23.26a4.59,4.59,0,1,1-4.59,4.6A4.6,4.6,0,0,1,36,23.26ZM36,39h0a11.1,11.1,0,1,0-11.1-11.1A11.11,11.11,0,0,0,36,39ZM40.52,48l6.2,6.21h0a3.25,3.25,0,0,1,0,4.59h0a3.25,3.25,0,0,1-4.59,0L36,52.71l-6.1,6.1a3.25,3.25,0,1,1-4.6-4.6L31.54,48a20.81,20.81,0,0,1-6.44-2.67,3.25,3.25,0,0,1-1-4.48h0a3.25,3.25,0,0,1,4.48-1,14.1,14.1,0,0,0,14.94,0h0A3.25,3.25,0,0,1,47,45.34,20.78,20.78,0,0,1,40.52,48Z"></path>
-            </svg></a></div>
+            </svg></a>
+        </div>
       </div>
       <div class="row space-above">
-        <div class="col-md-4 register_input">
+        <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="name_register">Имя:</label>
           <input class="bebasneue-reg" id="name_register" type="text" placeholder="Укажите имя">
         </div>
-        <div class="col-md-4 advice register_input">
+        <div class="col-md-4 col-xs-6 advice register_input">
           <label class="bebasneue-reg" for="email_register">Email:</label>
           <input class="bebasneue-reg" id="email_register" type="email" placeholder="Укажите email"><img src="img/advice.png" alt="">
         </div>
-        <div class="col-md-4 advice register_input">
+        <div class="col-md-4 col-xs-6 advice register_input">
           <label class="bebasneue-reg" for="phone_register">Телефон (логин):</label>
           <input class="bebasneue-reg" id="phone_register" type="tel" placeholder="+7 (___) ___-__-__"><img src="img/advice.png" alt="">
         </div>
-        <div class="col-md-4 register_input">
+        <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="region_register">Регион:</label>
           <select class="bebasneue-reg" id="region_register">
             <option value="">Укажите регион</option>
@@ -357,7 +368,7 @@
             <option value="">Регион</option>
           </select>
         </div>
-        <div class="col-md-4 register_input">
+        <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="city_register">Город/Район:</label>
           <select class="bebasneue-reg" id="city_register">
             <option value="">Укажите город</option>
@@ -365,7 +376,7 @@
             <option value="">город</option>
           </select>
         </div>
-        <div class="col-md-4 register_input">
+        <div class="col-md-4 col-xs-6 register_input">
           <label class="bebasneue-reg" for="bdate_register">Дата рождения:</label>
           <select class="bebasneue-reg" id="bdate_register">
             <option value="">Укажите дату рождения</option>
@@ -386,7 +397,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 text-left bebasneue-reg register_note"><sup>*</sup> Все поля обязательны для заполнения</div>
+        <div class="col-md-6 text-left bebasneue-reg register_note"><sup>*</sup> Все поля обязательны для заполнения</div>
       </div>
       <div class="row space-above">
         <div class="col-md-4 register_check">
@@ -485,7 +496,7 @@
               <div class="col-md-12 logo"></div>
             </div>
           </div>
-          <div class="col-md-6 text-right"><a href="#"><img src="img/vk.png" alt=""></a><a href="#"><img src="img/fb.png" alt=""></a><a href="#"><img src="img/ok.png" alt=""></a></div>
+          <div class="col-md-6 text-right footer_social"><a href="#"><img src="img/vk.png" alt=""></a><a href="#"><img src="img/fb.png" alt=""></a><a href="#"><img src="img/ok.png" alt=""></a></div>
         </div>
       </div>
     </div>

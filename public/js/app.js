@@ -1,13 +1,13 @@
-if($('#scroll').length){
-    var s = skrollr.init({
-        forceHeight: false,
-        constants: {
-            //fill the box for a "duration" of 150% of the viewport (pause for 150%)
-            //adjust for shorter/longer pause
-            box: '150p'
-        }
-    });
-}
+// if($('#scroll').length){
+//     var s = skrollr.init({
+//         forceHeight: false,
+//         constants: {
+//             //fill the box for a "duration" of 150% of the viewport (pause for 150%)
+//             //adjust for shorter/longer pause
+//             box: '150p'
+//         }
+//     });
+// }
 
 // Шапка
 $(window).scroll(function(){
@@ -17,15 +17,21 @@ $(window).scroll(function(){
         $('.header').removeClass('minimized');
     }
 })
+if($('.welcome').length){
+    $('#navbar a:not([data-toggle]), .modal_form_footer a:not([data-toggle]), .logo').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href').substr(1),
+            offset = target ? $('#' + target).offset().top : 0;
+        $('html, body').animate({ 
+            scrollTop: offset
+        }, 500);
+    });
+}
 
-$('#navbar a:not([data-toggle]), .modal_form_footer a:not([data-toggle]), .logo').click(function(e){
-    e.preventDefault();
-    var target = $(this).attr('href').substr(1),
-        offset = target ? $('#' + target).offset().top : 0;
-    $('html, body').animate({ 
-        scrollTop: offset
-    }, 500);
-});
+$('.hamb').click(function(){
+    $(this).toggleClass('opened');
+    $('.header').toggleClass('opened');
+})
 
 // Призы
 if($('.owl-carousel').length){
@@ -33,7 +39,7 @@ if($('.owl-carousel').length){
         nav: false,
         loop: true,
         items: 1,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 2500,
         autoplayHoverPause: false
     })

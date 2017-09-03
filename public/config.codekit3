@@ -430,6 +430,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/mechanics_mobile.png": {
+		"ft": 32768,
+		"iS": 25277,
+		"oA": 0,
+		"oAP": "\/img\/mechanics_mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/ok.png": {
 		"ft": 32768,
 		"iS": 2551,
