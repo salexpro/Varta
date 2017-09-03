@@ -59,64 +59,65 @@ html(lang='ru')
                     ul.prifile_mycodes_code
                         li 21.10.2017
                         li 3214987
-            .profile_data
-                .profile_header
-                    | Добавление данных для получения приза:
-                .row.profile_data_content
-                    .col-md-4.col-sm-6.profile_form
-                        | Индекс:
-                        input(type="text" placeholder="141406" size="5")
-                    .col-md-4.col-sm-6.profile_form
-                        | Регион:
-                        input(type="text" placeholder="Московская область")
-                    .col-md-4.col-sm-6.profile_form
-                        | Район:
-                        input(type="text" placeholder="Воскресенский")
-                    .col-md-4.col-sm-6.profile_form
-                        | Город:
-                        input(type="text" placeholder="Воскресенск" size="12")
-                    .col-md-4.col-sm-6.profile_form.profile_form--right
-                        | Улица:
-                        input(type="text" placeholder="Поперечная" size="15")
-                    .col-md-4.col-sm-6.profile_form.profile_form--right
-                        | Дом/Корпус:
-                        input(type="text" placeholder="125" size="3")
-                        input(type="text" placeholder="52" size="3")
-                    .col-md-7.col-sm-6.profile_form.profile_form--textarea
-                        | Дополнение к адресу:
-                        textarea(name="" rows="4" placeholder="Дополнение")
-                    .col-md-5.col-sm-6.profile_form.profile_form--right
-                        | Строение/Квартира:
-                        input(type="text" placeholder="108" size="3")
-                        input(type="text" placeholder="358" size="3")
-            .profile_passport
-                .profile_header
-                    | Паспортные данные:
-                .row.profile_passport_content
-                    .col-sm-3.col-xs-6.profile_form
-                        | Серия:
-                        input(type="text" placeholder="5269")
-                    .col-sm-3.col-xs-6.profile_form
-                        | Номер:
-                        input(type="text" placeholder="325695")
-                    .col-md-6.col-sm-12.profile_form
-                        | Кем выдан:
-                        input(type="text" placeholder="Воскресенским УВД Московской области")
-                    .col-md-4.col-sm-6.profile_form
-                        | Дата выдачи:
-                        input(type="text" placeholder="12.05.2003")
-                    .col-md-5.col-sm-6.profile_form
-                        | Код подразделения:
-                        input(type="text" placeholder="105-523")        
-                    .col-md-8.col-sm-12.profile_form.profile_form--textarea_row
-                        | Адрес прописки:
-                        textarea(name="" rows="4" placeholder="Адрес прописки")
-                    .col-md-8.col-sm-12.profile_form.profile_form--file
-                        | Скан паспорта:
-                        .file
-                            input(type="text" placeholder="C:\Documents\pasport.jpg" readonly)
-                            button обзор
-                    .col-sm-12.profile_footer
-                        input(type="submit" value="добавить")
+            form#pr_form(action="")
+                .profile_data
+                    .profile_header
+                        | Добавление данных для получения приза:
+                    .row.profile_data_content
+                        .col-md-4.col-sm-6.profile_form
+                            | Индекс:
+                            input(type="text" placeholder="141406" size="5" name="index")
+                        .col-md-4.col-sm-6.profile_form
+                            | Регион:
+                            input(type="text" placeholder="Московская область" name="region")
+                        .col-md-4.col-sm-6.profile_form
+                            | Район:
+                            input(type="text" placeholder="Воскресенский" name="district")
+                        .col-md-4.col-sm-6.profile_form
+                            | Город:
+                            input(type="text" placeholder="Воскресенск" size="12" name="city")
+                        .col-md-4.col-sm-6.profile_form.profile_form--right
+                            | Улица:
+                            input(type="text" placeholder="Поперечная" size="15" name="street")
+                        .col-md-4.col-sm-6.profile_form.profile_form--right
+                            | Дом/Корпус:
+                            input(type="text" placeholder="125" size="3" name="house")
+                            input(type="text" placeholder="52" size="3" name="housing")
+                        .col-md-7.col-sm-6.profile_form.profile_form--textarea
+                            | Дополнение к адресу:
+                            textarea(rows="4" placeholder="Дополнение" name="addition")
+                        .col-md-5.col-sm-6.profile_form.profile_form--right
+                            | Строение/Квартира:
+                            input(type="text" placeholder="108" size="3" name="building")
+                            input(type="text" placeholder="358" size="3" name="room")
+                .profile_passport
+                    .profile_header
+                        | Паспортные данные:
+                    .row.profile_passport_content
+                        .col-sm-3.col-xs-6.profile_form
+                            | Серия:
+                            input(type="text" placeholder="5269" name="series")
+                        .col-sm-3.col-xs-6.profile_form
+                            | Номер:
+                            input(type="text" placeholder="325695" name="number")
+                        .col-md-6.col-sm-12.profile_form
+                            | Кем выдан:
+                            input(type="text" placeholder="Воскресенским УВД Московской области" name="issued_by")
+                        .col-md-4.col-sm-6.profile_form
+                            | Дата выдачи:
+                            input(type="text" placeholder="12.05.2003" name="issued_date")
+                        .col-md-5.col-sm-6.profile_form
+                            | Код подразделения:
+                            input(type="text" placeholder="105-523" name="sub_code")
+                        .col-md-8.col-sm-12.profile_form.profile_form--textarea_row
+                            | Адрес прописки:
+                            textarea(rows="4" placeholder="Адрес прописки" name="address")
+                        .col-md-8.col-sm-12.profile_form.profile_form--file
+                            | Скан паспорта:
+                            label.file
+                                input(type="file" name="scan")
+                                input(type="text" placeholder="Прикрепить файл" readonly)
+                        .col-sm-12.profile_footer
+                            input(type="submit" value="добавить")
         include includes/_modals
         include includes/_footer

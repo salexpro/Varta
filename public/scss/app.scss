@@ -439,6 +439,27 @@ input, select, textarea {
             margin-left: -17px;
         }
         @media (max-width: 480px){
+            @keyframes tada-center {
+              from {
+                transform: scale3d(.7, .7, .7) rotate(-6deg);
+              }
+
+              10%, 20% {
+                transform: scale3d(.6, .6, .6) rotate3d(0, 0, 1, -9deg);
+              }
+
+              30%, 50%, 70%, 90% {
+                transform: scale3d(.8, .8, .8) rotate3d(0, 0, .8, -3deg);
+              }
+
+              40%, 60%, 80% {
+                transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, -9deg);
+              }
+
+              to {
+                transform: scale3d(.7, .7, .7) rotate(-6deg);
+              }
+            }
             transform: scale(0.7) rotate(-6deg);
             margin-top: -90px;
         }
@@ -2031,7 +2052,7 @@ select{
     @media (max-width: 991px){
         font-size: 23px;
     }
-    button, [type="submit"]{
+    button:not([class^="picker"]), [type="submit"]{
         background-color: $primary-color;
         border: none;
         color: $white;
@@ -2158,7 +2179,7 @@ select{
         &--file{
             @media (max-width: 480px){
                 flex-wrap: wrap;
-                input:nth-child(1){
+                input[type="text"]{
                     margin: 0;
                 }
             }
@@ -2273,13 +2294,39 @@ select{
     }
 }
 
-.file{
-    display: flex;  
-    button{
+label.file{
+    position: relative;
+    display: flex;
+    width: 100%;
+    &::after{
+        content: 'обзор';
+        padding: 0 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        cursor: pointer;
+        color: $white;
+        font-family: $font_2;
         margin-left: 37px;
         @media (max-width: 480px){
             margin-left: 15px;
+            padding: 0 20px;
         }
+    }
+    [type="file"]{
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        &.error + [type="text"]{
+            border-color: red;
+        }
+    }
+    [type="text"]{
+        position: relative;
+        z-index: -1;
     }
 }
 

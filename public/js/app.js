@@ -93,6 +93,27 @@ if($('.feedback').length){
     });
 }
 
+// Календарь
+$.extend($.fn.pickadate.defaults, {
+    firstDay: 1,
+    format: 'dd.mm.yyyy',
+    today: '',
+    clear: 'Очистить',
+    close: 'Закрыть',
+    monthsFull: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthsShort: ['Янв', 'Фев', 'Март', 'Апр', 'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+    weekdaysFull: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+});
+
+var today = new Date();
+today.setDate(today.getDate() - (365 * 18 + 5)); 
+
+$('[name="bdate"], [name="issued_date"]').pickadate({
+    selectYears: 82,
+    max: today
+});
+
 if($('.register').length){
 
     // Метод телефонв
@@ -105,27 +126,6 @@ if($('.register').length){
     // Маски
     $('[name="phone"]').inputmask('+7 (999) 999-99-99', { 'placeholder': '_' });
     // $('[name="bdate"]').inputmask('99.99.9999', { 'placeholder': 'X' });
-
-    // Календарь
-    $.extend($.fn.pickadate.defaults, {
-        firstDay: 1,
-        format: 'dd.mm.yyyy',
-        today: '',
-        clear: 'Очистить',
-        close: 'Закрыть',
-        monthsFull: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-        monthsShort: ['Янв', 'Фев', 'Март', 'Апр', 'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-        weekdaysFull: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-        weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    });
-
-    var today = new Date();
-    today.setDate(today.getDate() - (365 * 18 + 5)); 
-
-    $('[name="bdate"]').pickadate({
-        selectYears: 82,
-        max: today
-    });
 
     $('.register').validate({
         errorPlacement: function(error, element) {
@@ -163,6 +163,58 @@ if($('.register').length){
         }
     });
 }
+
+if($('#pr_form').length){
+    $('[name="index"], [name="number"]').inputmask('999999', { 'placeholder': 'X' });
+    $('[name="series"]').inputmask('9999', { 'placeholder': 'X' });
+    $('[name="sub_code"]').inputmask('999-999', { 'placeholder': 'X' });
+
+    $('#pr_form').validate({
+        errorPlacement: function(error, element) {
+            $(element).addClass('error')
+        },
+        success: function(label, element) {
+            $(element).removeClass('error')
+        },
+        rules: {
+            index: {
+                required: true,
+                number: true
+            },
+            region: 'required',
+            district: 'required',
+            city: 'required',
+            street: 'required',
+            house: 'required',
+            room: 'required',
+            series: {
+                required: true,
+                number: true
+            },
+            number: {
+                required: true,
+                number: true
+            },
+            issued_by: 'required',
+            issued_date: 'required',
+            sub_code: {
+                required: true,
+                minlength: 7
+            },
+            address: 'required',
+            scan: 'required'
+        },
+        submitHandler: function(form) {
+            return false;
+        }
+    });
+}
+
+// Загрузка файла в форме
+$('label.file').change(function(){
+    var file_name = $('[type="file"]',this)[0].files[0] ? $('[type="file"]',this)[0].files[0].name : 'Прикрепить файл';
+    $('[type="text"]',this).val(file_name);
+})
 
 $('#login form').validate({
     errorPlacement: function(error, element) {

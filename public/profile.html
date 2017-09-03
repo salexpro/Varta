@@ -11,6 +11,8 @@
   <meta name="theme-color" content="#eebd1c">
   <title>Varta</title>
   <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="./vendor/pickadate/lib/compressed/themes/classic.css">
+  <link rel="stylesheet" href="./vendor/pickadate/lib/compressed/themes/classic.date.css">
   <link href="css/app.css" rel="stylesheet">
   <body>
     <div class="header">
@@ -97,69 +99,71 @@
           </ul>
         </div>
       </div>
-      <div class="profile_data">
-        <div class="profile_header">Добавление данных для получения приза:</div>
-        <div class="row profile_data_content">
-          <div class="col-md-4 col-sm-6 profile_form">Индекс:
-            <input type="text" placeholder="141406" size="5">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form">Регион:
-            <input type="text" placeholder="Московская область">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form">Район:
-            <input type="text" placeholder="Воскресенский">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form">Город:
-            <input type="text" placeholder="Воскресенск" size="12">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form profile_form--right">Улица:
-            <input type="text" placeholder="Поперечная" size="15">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form profile_form--right">Дом/Корпус:
-            <input type="text" placeholder="125" size="3">
-            <input type="text" placeholder="52" size="3">
-          </div>
-          <div class="col-md-7 col-sm-6 profile_form profile_form--textarea">Дополнение к адресу:
-            <textarea name="" rows="4" placeholder="Дополнение"></textarea>
-          </div>
-          <div class="col-md-5 col-sm-6 profile_form profile_form--right">Строение/Квартира:
-            <input type="text" placeholder="108" size="3">
-            <input type="text" placeholder="358" size="3">
-          </div>
-        </div>
-      </div>
-      <div class="profile_passport">
-        <div class="profile_header">Паспортные данные:</div>
-        <div class="row profile_passport_content">
-          <div class="col-sm-3 col-xs-6 profile_form">Серия:
-            <input type="text" placeholder="5269">
-          </div>
-          <div class="col-sm-3 col-xs-6 profile_form">Номер:
-            <input type="text" placeholder="325695">
-          </div>
-          <div class="col-md-6 col-sm-12 profile_form">Кем выдан:
-            <input type="text" placeholder="Воскресенским УВД Московской области">
-          </div>
-          <div class="col-md-4 col-sm-6 profile_form">Дата выдачи:
-            <input type="text" placeholder="12.05.2003">
-          </div>
-          <div class="col-md-5 col-sm-6 profile_form">Код подразделения:
-            <input type="text" placeholder="105-523">
-          </div>
-          <div class="col-md-8 col-sm-12 profile_form profile_form--textarea_row">Адрес прописки:
-            <textarea name="" rows="4" placeholder="Адрес прописки"></textarea>
-          </div>
-          <div class="col-md-8 col-sm-12 profile_form profile_form--file">Скан паспорта:
-            <div class="file">
-              <input type="text" placeholder="C:Documentspasport.jpg" readonly>
-              <button>обзор</button>
+      <form id="pr_form" action="">
+        <div class="profile_data">
+          <div class="profile_header">Добавление данных для получения приза:</div>
+          <div class="row profile_data_content">
+            <div class="col-md-4 col-sm-6 profile_form">Индекс:
+              <input type="text" placeholder="141406" size="5" name="index">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form">Регион:
+              <input type="text" placeholder="Московская область" name="region">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form">Район:
+              <input type="text" placeholder="Воскресенский" name="district">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form">Город:
+              <input type="text" placeholder="Воскресенск" size="12" name="city">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form profile_form--right">Улица:
+              <input type="text" placeholder="Поперечная" size="15" name="street">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form profile_form--right">Дом/Корпус:
+              <input type="text" placeholder="125" size="3" name="house">
+              <input type="text" placeholder="52" size="3" name="housing">
+            </div>
+            <div class="col-md-7 col-sm-6 profile_form profile_form--textarea">Дополнение к адресу:
+              <textarea rows="4" placeholder="Дополнение" name="addition"></textarea>
+            </div>
+            <div class="col-md-5 col-sm-6 profile_form profile_form--right">Строение/Квартира:
+              <input type="text" placeholder="108" size="3" name="building">
+              <input type="text" placeholder="358" size="3" name="room">
             </div>
           </div>
-          <div class="col-sm-12 profile_footer">
-            <input type="submit" value="добавить">
+        </div>
+        <div class="profile_passport">
+          <div class="profile_header">Паспортные данные:</div>
+          <div class="row profile_passport_content">
+            <div class="col-sm-3 col-xs-6 profile_form">Серия:
+              <input type="text" placeholder="5269" name="series">
+            </div>
+            <div class="col-sm-3 col-xs-6 profile_form">Номер:
+              <input type="text" placeholder="325695" name="number">
+            </div>
+            <div class="col-md-6 col-sm-12 profile_form">Кем выдан:
+              <input type="text" placeholder="Воскресенским УВД Московской области" name="issued_by">
+            </div>
+            <div class="col-md-4 col-sm-6 profile_form">Дата выдачи:
+              <input type="text" placeholder="12.05.2003" name="issued_date">
+            </div>
+            <div class="col-md-5 col-sm-6 profile_form">Код подразделения:
+              <input type="text" placeholder="105-523" name="sub_code">
+            </div>
+            <div class="col-md-8 col-sm-12 profile_form profile_form--textarea_row">Адрес прописки:
+              <textarea rows="4" placeholder="Адрес прописки" name="address"></textarea>
+            </div>
+            <div class="col-md-8 col-sm-12 profile_form profile_form--file">Скан паспорта:
+              <label class="file">
+                <input type="file" name="scan">
+                <input type="text" placeholder="Прикрепить файл" readonly>
+              </label>
+            </div>
+            <div class="col-sm-12 profile_footer">
+              <input type="submit" value="добавить">
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
     <div class="modal fade bs-example-modal-lg" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg" role="document">
@@ -254,6 +258,8 @@
     </div>
     <script src="./vendor/jquery/dist/jquery.min.js"></script>
     <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./vendor/pickadate/lib/compressed/picker.js"></script>
+    <script src="./vendor/pickadate/lib/compressed/picker.date.js"></script>
     <script src="./vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="./vendor/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="./js/app.min.js"></script>
