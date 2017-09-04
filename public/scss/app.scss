@@ -126,15 +126,6 @@ input, select, textarea {
 .fixi-reg {
     font-family: $font_2;
 }
-#scroll {
-    position: fixed;
-    z-index: 100;
-    right: 25px;
-    top: 20%;
-    @media (max-width: 1229px){
-        display: none;
-    }
-}
 #dates {
     color: $primary-color;
     transform: rotate(-2deg);
@@ -2582,5 +2573,50 @@ span.prize {
     }
     &__select--year{
         margin: 0;
+    }
+}
+
+.scroller{
+    position: fixed;
+    z-index: 100;
+    right: 25px;
+    top: 20%;
+    width: 51px;
+    height: 80px;
+    background-image: url(../img/scroll.svg);
+    background-repeat: no-repeat;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: 500ms;
+    @media (max-width: 1229px){
+        display: none;
+    }
+    &.scrolling{
+        .scroller_arrow{
+            opacity: 0;
+        }
+    }
+    &.end{
+        opacity: 0 !important;
+    }
+    &_arrow{
+        cursor: default;
+        width: 29px;
+        height: 58px;
+        background-image: url(../img/scroll_arrow.svg);
+        position: absolute;
+        top: 94px;
+        left: 12px;
+        animation: arrow 1s ease-in-out infinite;
+        transition: 500ms;
+    }
+}
+
+@keyframes arrow {
+    0%, 100% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(5px)
     }
 }

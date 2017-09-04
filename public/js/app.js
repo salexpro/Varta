@@ -1,5 +1,5 @@
 if($(window).width() >= 1230){
-    if($('#scroll').length){
+    if($('.scroller').length){
         var s = skrollr.init({
             forceHeight: false,
             constants: {
@@ -12,21 +12,43 @@ if($(window).width() >= 1230){
 }
 
 // Шапка
-$(window).scroll(function(){
+$(window).scroll(function() {
     if($(window).scrollTop() > 20){
         $('.header').addClass('minimized');
     } else {
         $('.header').removeClass('minimized');
     }
-})
+});
+
 if($('.welcome').length){
-    $('#navbar a:not([data-toggle]), .modal_form_footer a:not([data-toggle]), .logo').click(function(e){
+    var sections = ['welcome','prizes','faq','winners','feedback','map','register'];
+    var curr_el  = 0;
+
+    $('#navbar a:not([data-toggle]), .modal_form_footer a:not([data-toggle]), .logo, .scroller').click(function(e){
         e.preventDefault();
-        var target = $(this).attr('href').substr(1),
-            offset = target ? $('#' + target).offset().top : 0;
+        if($(this).hasClass('scroller')){
+            var target = sections[curr_el+1];
+        } else {
+            var target = $(this).attr('href').substr(1);
+        }
+        var offset = (target!=='') ? $('#' + target).offset().top : 0;
+        curr_el = target ? sections.indexOf(target) : 0;
         $('html, body').animate({ 
             scrollTop: offset
         }, 500);
+        if(curr_el==6){
+            $('.scroller').addClass('end');
+        } else {
+            $('.scroller').removeClass('end');
+        }
+    });
+
+    $(window).scroll(function() {
+        $('.scroller').addClass('scrolling');
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
+            $('.scroller').removeClass('scrolling');
+        }, 500));
     });
 }
 
