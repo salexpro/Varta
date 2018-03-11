@@ -1,3 +1,14 @@
+/*
+@codekit-prepend '../node_modules/jquery/dist/jquery.min';
+@codekit-prepend '../node_modules/bootstrap/dist/js/bootstrap.min';
+@codekit-prepend '../node_modules/skrollr/dist/skrollr.min';
+@codekit-prepend '../node_modules/owl.carousel/dist/owl.carousel.min';
+@codekit-prepend '../node_modules/pickadate/lib/picker';
+@codekit-prepend '../node_modules/pickadate/lib/picker.date';
+@codekit-prepend '../node_modules/jquery-validation/dist/jquery.validate.min';
+@codekit-prepend '../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle';
+*/
+
 if($(window).width() >= 1230){
     if($('.scroller').length){
         var s = skrollr.init({
